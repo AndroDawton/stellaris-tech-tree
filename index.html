@@ -14,7 +14,51 @@
         cursor: pointer;
         text-decoration: underline;
       }
+      
+      /* Neue Styles für die Steuerungselemente */
+      .tech-controls {
+        position: absolute;
+        top: 2px;
+        right: 5px;
+        z-index: 10;
+        font-family: monospace;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 1;
+      }
+      
+      .btn-dim-tree, .btn-hide-tree {
+        cursor: pointer;
+        margin-left: 6px;
+        padding: 0 3px;
+        color: #888;
+        transition: color 0.2s;
+      }
+      
+      .btn-dim-tree:hover {
+        color: #ffb000; /* Stellaris-Gelb beim Hover */
+      }
+      
+      .btn-hide-tree:hover {
+        color: #ff0000; /* Rot für das Ausblenden */
+      }
+      
+      /* Klassen für die JS-Logik */
+      .node.tech-dimmed {
+        opacity: 0.25 !important;
+        pointer-events: none; /* Macht das Kästchen unanklickbar */
+      }
+      
+      .node.tech-dimmed .tech-controls {
+        pointer-events: auto; /* Erlaubt es trotzdem, das Dimmen rückgängig zu machen */
+        opacity: 1;
+      }
+
+      .node.tech-hidden {
+        display: none !important;
+      }
     </style>
+
 
     <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
     <link href="./assets/vendor/Treant.css" rel="stylesheet">
