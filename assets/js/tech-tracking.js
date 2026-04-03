@@ -372,23 +372,36 @@ function toggleHideChildren(area, nodeHTMLid, shouldHide) {
     var inode = getNodeDBNode(area, nodeHTMLid);
     if (!inode) return;
 
-    // Wir verstecken NICHT die geklickte Tech selbst, sondern nur deren Kinder und Linien!
+    var $parentEl = $('#' + nodeHTMLid);
+
+    // Die geklickte Tech selbst wird beim Verstecken der Kinder grau gefärbt
+    if (shouldHide) {
+        $parentEl.addClass('tech-dimmed');
+    } else {
+        $parentEl.removeClass('tech-dimmed');
+    }
+
+    // Wir gehen alle Kinder durch
     for (const child of inode.children) {
         var child_node = charts[area].tree.nodeDB.db[child];
         var $childEl = $('#' + child_node.nodeHTMLid);
         
-        // Verbindungslinie (Connector) holen
-        var myConnector = $(child_node.connector).get(0);
+        // Hier holen wir die Verbindungslinie
+        var myConnector = child_node.connector;
 
         if (shouldHide) {
             $childEl.addClass('tech-hidden');
+            // Linie verstecken
             if (myConnector) $(myConnector).css('display', 'none');
         } else {
             $childEl.removeClass('tech-hidden');
-            if (myConnector) $(myConnector).css('display', ''); // Standard wiederherstellen
+            // Linie wieder anzeigen
+            if (myConnector) $(myConnector).css('display', '');
         }
 
-        // Rekursiv weiter nach unten gehen
+        // Rekursiv weiter nach unten gehen für alle Enkel
         toggleHideChildren(area, child_node.nodeHTMLid, shouldHide);
     }
+}
+
 }
