@@ -313,4 +313,48 @@ function loadResearchFromLocalStorage() {
     } else {
         alert("Unable to load data from local storage!");
     }
+// Funktion 1: Ausgrauen (Dimmen) von Techs und deren Kindern
+function toggleDimTech(area, nodeHTMLid, shouldDim) {
+    var inode = getNodeDBNode(area, nodeHTMLid);
+    if (!inode) return;
+
+    var $el = $('#' + nodeHTMLid);
+
+    if (shouldDim) {
+        $el.addClass('tech-dimmed');
+    } else {
+        $el.removeClass('tech-dimmed');
+    }
+
+    // Rekursiv für alle Kinder ausführen
+    for (const child of inode.children) {
+        var child_node = charts[area].tree.nodeDB.db[child];
+        toggleDimTech(area, child_node.nodeHTMLid, shouldDim);
+    }
+}
+
+// Funktion 2: Komplettes Verstecken von Kindern und Verbindungslinien
+function toggleHideChildren(area, nodeHTMLid, shouldHide) {
+    var inode = getNodeDBNode(area, nodeHTMLid);
+    if (!inode) return;
+
+    // Wir verstecken NICHT die geklickte Tech selbst, sondern nur deren Kinder und Linien!
+    for (const child of inode.children) {
+        var child_node = charts[area].tree.nodeDB.db[child];
+        var $childEl = $('#' + child_node.nodeHTMLid);
+        
+        // Verbindungslinie (Connector) holen
+        var myConnector = $(child_node.connector).get(0);
+
+        if (shouldHide) {
+            $childEl.addClass('tech-hidden');
+            if (myConnector) $(myConnector).css('display', 'none');
+        } else {
+            $childEl.removeClass('tech-hidden');
+            if (myConnector) $(myConnector).css('display', ''); // Standard wiederherstellen
+        }
+
+        // Rekursiv weiter nach unten gehen
+        toggleHideChildren(area, child_node.nodeHTMLid, shouldHide);
+    }
 }
