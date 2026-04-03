@@ -335,7 +335,6 @@ function saveResearchToLocalStorage() {
     });
     localStorage['LocalStorage'] = JSON.stringify(data);
 }
-}
 function loadResearchFromLocalStorage() {
     if(localStorage['LocalStorage']) {
         var data = JSON.parse(localStorage['LocalStorage']);
@@ -347,6 +346,7 @@ function loadResearchFromLocalStorage() {
     } else {
         alert("Unable to load data from local storage!");
     }
+}
 // Funktion 1: Ausgrauen (Dimmen) von Techs und deren Kindern
 function toggleDimTech(area, nodeHTMLid, shouldDim) {
     var inode = getNodeDBNode(area, nodeHTMLid);
