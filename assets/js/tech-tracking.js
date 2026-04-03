@@ -2,7 +2,41 @@
 var charts = {};
 
 function init_nodestatus(area) {
-    $('#tech-tree-' + area).find('.node div.node-status:not(.status-loaded)').each(function() {
+    var $areaContainer = $('#tech-tree-' + area);
+
+    // 1. UNSERE NEUEN STEUERUNGSELEMENTE BINDEN
+    // Klick auf "o" (Ausgrauen)
+    $areaContainer.on('click', '.btn-dim-tree', function(event) {
+        event.stopPropagation(); // Verhindert das normale Tech-Klick-Event!
+        var $node = $(this).closest('.node');
+        var nodeHTMLid = $node.attr('id');
+        
+        // Prüfen, ob es schon gedimmt ist
+        var isDimmed = $node.hasClass('tech-dimmed');
+        toggleDimTech(area, nodeHTMLid, !isDimmed);
+    });
+
+    // Klick auf "x" (Verstecken)
+    $areaContainer.on('click', '.btn-hide-tree', function(event) {
+        event.stopPropagation(); // Verhindert das normale Tech-Klick-Event!
+        var $node = $(this).closest('.node');
+        var nodeHTMLid = $node.attr('id');
+        
+        // Wir nutzen eine Daten-Klasse am Eltern-Knoten, um den Status zu merken
+        var areChildrenHidden = $node.hasClass('children-hidden');
+        
+        if (!areChildrenHidden) {
+            $node.addClass('children-hidden');
+            toggleHideChildren(area, nodeHTMLid, true);
+        } else {
+            $node.removeClass('children-hidden');
+            toggleHideChildren(area, nodeHTMLid, false);
+        }
+    });
+
+
+    // 2. DAS ORIGINAL-VERHALTEN (unverändert, nur sauberer selektiert)
+    $areaContainer.find('.node div.node-status:not(.status-loaded)').each(function() {
         var events = $._data($( this )[0], "events");
 
         if(undefined === events || undefined === events.click) {
