@@ -335,7 +335,7 @@ function saveResearchToLocalStorage() {
     });
     localStorage['LocalStorage'] = JSON.stringify(data);
 }
-
+}
 function loadResearchFromLocalStorage() {
     if(localStorage['LocalStorage']) {
         var data = JSON.parse(localStorage['LocalStorage']);
