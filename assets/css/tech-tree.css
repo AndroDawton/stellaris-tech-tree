@@ -694,9 +694,28 @@ span.tier-5 {
     filter: grayscale(100%);
 }
 
-/* Das DLC Tab in der Navbar bekommt runde Ecken an allen 4 Seiten */
 .float-Element.dlc-main-tab {
-    border-radius: 20px !important; /* Ovaler Look */
-    overflow: visible !important;   /* Damit das Menü nicht abgeschnitten wird */
-    transition: background-color 0.2s ease;
+    border-radius: 20px !important; /* Macht es zum Oval */
+    overflow: visible !important;
+    
+    /* 1. GRÖSSE & ABSTÄNDE */
+    width: 60px !important;        /* Reduziert die Breite (vorher war es viel breiter) */
+    height: 20px !important;       /* Reduziert die Höhe */
+    /* margin-top: 15px !important;     Schiebt den Tab etwas nach unten, damit er auf einer Linie mit den anderen ist */
+    
+    /* 2. ZENTRIERUNG (Das rückt das Wort "DLC" exakt in die Mitte) */
+    display: flex !important;
+    align-items: center !important;  /* Zentriert vertikal */
+    justify-content: center !important; /* Zentriert horizontal */
+    
+    /* 3. INNENABSTÄNDE ENTFERNEN */
+    padding: 0 !important;          /* Verhindert, dass alte Abstände das Oval verzerren */
 }
+
+/* Wir müssen auch dem Link-Tag im Inneren sagen, dass es sich anpassen soll 
+.float-Element.dlc-main-tab .float-Contents {
+    width: auto !important;
+    height: auto !important;
+    line-height: 1 !important;     /* Verhindert, dass die Zeilenhöhe das Wort nach unten drückt */
+    padding: 0 !important;
+} */
