@@ -89,14 +89,13 @@ function init_nodestatus(area) {
             $( this ).addClass('status-loaded');
         }
     });
-}
+} // <--- Hier endet init_nodestatus korrekt!
 
 function getNodeDBNode(area, name) {
     for(const item of charts[area].tree.nodeDB.db) {
         if(item.nodeHTMLid === name) return item;
     }
     // Didn't find in the area charts - maybe it's in another one ?
-    // (see Science Nexus and other Mega Structure in Engineering tree)
     for(const tree in charts) {
         if(tree === area) continue;
         for(const item of charts[tree].tree.nodeDB.db) {
@@ -107,16 +106,13 @@ function getNodeDBNode(area, name) {
 }
 
 function updateResearch(area, name, active) {
-    // Check if node is already set to proper state
     if($( '#' + name + ' div.node-status').hasClass('active') == active) {
         return;
     }
 
-    // Get the nodeDB item
     var inode = getNodeDBNode(area, name);
 
     if(active) {
-        // Update the node-status
         $('#' + name).addClass('active');
         $('#' + name).find('.node-status').addClass('active');
 
@@ -130,19 +126,16 @@ function updateResearch(area, name, active) {
         }
 
     } else {
-        // Update the node-status
         $('#' + name).removeClass('active');
         $('#' + name).find('.node-status').removeClass('active');
 
         if(inode == null) return;
 
-        // For each Children update the connector
         for(const child of inode.children) {
             var child_node = charts[area].tree.nodeDB.db[child];
             $(child_node.connector[0]).removeClass(area);
             updateResearch(area, child_node.nodeHTMLid, false);
         }
-
     }
 }
 
@@ -175,8 +168,6 @@ function initDB() {
     request.onsuccess = function(event) {
         offlineDB = event.target.result;
         offlineDB.onerror = function(event) {
-            // Generic error handler for all errors targeted at this database's
-            // requests!
             console.error("IndexedDB error: " + event.target.errorCode);
         };
         offlineDB.onupgradeneeded = function(event) {
@@ -187,7 +178,6 @@ function initDB() {
         findLists();
     };
     request.onupgradeneeded = function(event) {
-        // Create an objectStore for this database
         event.currentTarget.result.createObjectStore("TreeStore", { keyPath: "name" });
     };
 }
@@ -213,7 +203,7 @@ function findLists() {
                 } else {
                     saveListToIndexedDB("Default List");
                 }
-            })
+            });
             $('#research_load').on('click', function(event) {
                 event.preventDefault();
                 if($('#research_selection').val() && $.trim($('#research_selection').val()).length !== 0) {
@@ -221,13 +211,13 @@ function findLists() {
                 } else {
                     loadListFromIndexedDB("Default List");
                 }
-            })
+            });
             $('#research_remove').on('click', function(event) {
                 event.preventDefault();
                 if($('#research_selection').val() && $.trim($('#research_selection').val()).length !== 0) {
                     removeListFromIndexedDB( $('#research_selection').val() );
                 }
-            })
+            });
             $('.research').removeClass('hide');
         }
     };
@@ -235,7 +225,6 @@ function findLists() {
 
 function saveListToIndexedDB(name) {
     if(offlineDB) {
-
         var data = [];
         research.forEach(area => {
             $('.' + area + ' div.node-status.active').parent().not(':contains(\\(Starting\\))').each(function() {
@@ -248,7 +237,7 @@ function saveListToIndexedDB(name) {
         var result = objectStore.put({name: name, data: data});
         result.onsuccess = function(event) {
             if(event.target.result && name == event.target.result) {
-                alert('Research List: ' + name + ' was saved successfully!')
+                alert('Research List: ' + name + ' was saved successfully!');
                 return true;
             }
         };
@@ -273,7 +262,6 @@ function loadListFromIndexedDB(name) {
                 });
                 data.forEach(item => {
                     if('anomaly' == item.area) {
-                        //TODO
                         $('#' + item.key + ' .div.node-status').addClass('active');
                     }
                     else {
@@ -282,13 +270,13 @@ function loadListFromIndexedDB(name) {
                 });
             }
             else {
-                event.target.errorCode = `Research list "${name}" does not exist.`
+                event.target.errorCode = `Research list "${name}" does not exist.`;
                 result.onerror(event);
             }
         };
         result.onerror = function(event) {
             alert('Unable to load Research List: ' + name + '\nError: ' + event.target.errorCode);
-        }
+        };
     } else {
         initDB();
     }
@@ -335,6 +323,7 @@ function saveResearchToLocalStorage() {
     });
     localStorage['LocalStorage'] = JSON.stringify(data);
 }
+
 function loadResearchFromLocalStorage() {
     if(localStorage['LocalStorage']) {
         var data = JSON.parse(localStorage['LocalStorage']);
@@ -346,7 +335,8 @@ function loadResearchFromLocalStorage() {
     } else {
         alert("Unable to load data from local storage!");
     }
-}
+} // <--- Hier endet loadResearchFromLocalStorage korrekt!
+
 // Funktion 1: Ausgrauen (Dimmen) von Techs und deren Kindern
 function toggleDimTech(area, nodeHTMLid, shouldDim) {
     var inode = getNodeDBNode(area, nodeHTMLid);
@@ -360,7 +350,6 @@ function toggleDimTech(area, nodeHTMLid, shouldDim) {
         $el.removeClass('tech-dimmed');
     }
 
-    // Rekursiv für alle Kinder ausführen
     for (const child of inode.children) {
         var child_node = charts[area].tree.nodeDB.db[child];
         toggleDimTech(area, child_node.nodeHTMLid, shouldDim);
@@ -374,32 +363,25 @@ function toggleHideChildren(area, nodeHTMLid, shouldHide) {
 
     var $parentEl = $('#' + nodeHTMLid);
 
-    // Die geklickte Tech selbst wird beim Verstecken der Kinder grau gefärbt
     if (shouldHide) {
         $parentEl.addClass('tech-dimmed');
     } else {
         $parentEl.removeClass('tech-dimmed');
     }
 
-    // Wir gehen alle Kinder durch
     for (const child of inode.children) {
         var child_node = charts[area].tree.nodeDB.db[child];
         var $childEl = $('#' + child_node.nodeHTMLid);
-        
-        // Hier holen wir die Verbindungslinie
         var myConnector = child_node.connector;
 
         if (shouldHide) {
             $childEl.addClass('tech-hidden');
-            // Linie verstecken
             if (myConnector) $(myConnector).css('display', 'none');
         } else {
             $childEl.removeClass('tech-hidden');
-            // Linie wieder anzeigen
             if (myConnector) $(myConnector).css('display', '');
         }
 
-        // Rekursiv weiter nach unten gehen für alle Enkel
         toggleHideChildren(area, child_node.nodeHTMLid, shouldHide);
     }
 }
