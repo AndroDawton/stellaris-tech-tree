@@ -701,7 +701,7 @@ span.tier-5 {
     /* 1. GRÖSSE & ABSTÄNDE */
     width: 60px !important;        /* Reduziert die Breite (vorher war es viel breiter) */
     height: 20px !important;       /* Reduziert die Höhe */
-    /* margin-top: 15px !important;     Schiebt den Tab etwas nach unten, damit er auf einer Linie mit den anderen ist */
+    margin-top: 15px !important;   /*  Schiebt den Tab etwas nach unten, damit er auf einer Linie mit den anderen ist */
     
     /* 2. ZENTRIERUNG (Das rückt das Wort "DLC" exakt in die Mitte) */
     display: flex !important;
