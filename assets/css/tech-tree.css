@@ -716,6 +716,6 @@ span.tier-5 {
 .float-Element.dlc-main-tab .float-Contents {
     width: auto !important;
     height: auto !important;
-    line-height: 1 !important;     /* Verhindert, dass die Zeilenhöhe das Wort nach unten drückt */
+    line-height: 1 !important;      Verhindert, dass die Zeilenhöhe das Wort nach unten drückt 
     padding: 0 !important;
 } */
