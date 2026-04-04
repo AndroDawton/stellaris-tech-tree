@@ -536,13 +536,13 @@ span.tier-2 {
 }
 
 span.tier-3 {
-    color: #990000;
-}
-
-span.tier-4 {
     color: #ff00ea;
 }
 
-span.tier-5 {
+span.tier-4 {
     color: #7700aa;
+}
+
+span.tier-5 {
+    color: #990000;
 }
