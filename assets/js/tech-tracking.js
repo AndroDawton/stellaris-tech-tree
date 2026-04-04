@@ -35,26 +35,7 @@ function init_nodestatus(area) {
     });
 
 
-    // 2. DAS ORIGINAL-VERHALTEN (unverändert, nur sauberer selektiert)
-    $areaContainer.find('.node div.node-status:not(.status-loaded)').each(function() {
-        var events = $._data($( this )[0], "events");
-
-        if(undefined === events || undefined === events.click) {
-            $(this).on('click', function toggle_status() {
-                // Find chart for the research
-                if($(this).parent().hasClass('anomaly')) {
-                    if($(this).hasClass('active')) {
-                        $(this).removeClass('active');
-                        $(this).parent().removeClass('active');
-                    } else {
-                        $(this).addClass('active');
-                        $(this).parent().addClass('active');
-                    }
-
-                    event.stopPropagation();
-                    return;
-                }
-                    // 2. DAS ORIGINAL-VERHALTEN (unverändert, nur mit Schutz für Anomalien!)
+    // 2. DAS ORIGINAL-VERHALTEN (unverändert, nur mit Schutz für Anomalien!)
     $areaContainer.find('.node div.node-status:not(.status-loaded)').each(function() {
         var events = $._data($( this )[0], "events");
 
@@ -74,7 +55,7 @@ function init_nodestatus(area) {
                     return;
                 }
                 
-                // --- AB HIER IST NEU: SCHUTZ FÜR ANOMALIEN ---
+                // --- SCHUTZ FÜR ANOMALIEN ---
                 // Anomalien haben keine Bäume und keine Eltern!
                 if (area === 'anomalies') {
                     var id = $( this ).parent().attr('id');
@@ -94,7 +75,6 @@ function init_nodestatus(area) {
                 var parent_id = $(this).parent().data('treenode').parentId;
                 if(undefined === parent_id) {
                     return;
- 
                 }
                 // If the parent is the root node [0], this is the first research that can be activated
                 if(0 < parent_id) {
@@ -126,7 +106,7 @@ function init_nodestatus(area) {
             $( this ).addClass('status-loaded');
         }
     });
-} // <--- Hier endet init_nodestatus korrekt!
+} // Hier endet init_nodestatus korrekt
 
 function getNodeDBNode(area, name) {
     for(const item of charts[area].tree.nodeDB.db) {
@@ -299,7 +279,8 @@ function loadListFromIndexedDB(name) {
                 });
                 data.forEach(item => {
                     if('anomaly' == item.area) {
-                        $('#' + item.key + ' .div.node-status').addClass('active');
+                        $('#' + item.key).addClass('active');
+                        $('#' + item.key).find('div.node-status').addClass('active');
                     }
                     else {
                         updateResearch(item.area, item.key, true);
@@ -372,7 +353,7 @@ function loadResearchFromLocalStorage() {
     } else {
         alert("Unable to load data from local storage!");
     }
-} // <--- Hier endet loadResearchFromLocalStorage korrekt!
+}
 
 // Funktion 1: Ausgrauen (Dimmen) von Techs und deren Kindern
 function toggleDimTech(area, nodeHTMLid, shouldDim) {
@@ -410,20 +391,16 @@ function toggleHideChildren(area, nodeHTMLid, shouldHide) {
         var child_node = charts[area].tree.nodeDB.db[child];
         var $childEl = $('#' + child_node.nodeHTMLid);
         
-        // Wir holen die Linie
         var myConnector = child_node.connector && child_node.connector[0];
 
         if (shouldHide) {
             $childEl.addClass('tech-hidden');
-            // Wir geben der Linie direkt die Klasse zum Verstecken!
             if (myConnector) $(myConnector).addClass('tech-hidden');
         } else {
             $childEl.removeClass('tech-hidden');
             if (myConnector) $(myConnector).removeClass('tech-hidden');
         }
 
-        // Da wir uns hier selbst wieder aufrufen, wird das für JEDES Kind
-        // und JEDEN Enkel im gesamten Zweig gemacht!
         toggleHideChildren(area, child_node.nodeHTMLid, shouldHide);
     }
 }
