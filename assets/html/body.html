@@ -1,3 +1,8 @@
+Hier ist deine komplette body.html mit den integrierten Zähler-Elementen für die drei Forschungsbereiche.
+
+Ich habe die Zähler direkt in die jeweiligen Schaltflächen gepackt. So bleiben sie beim Anklicken der Kategorien sauber mit der Navigation verbunden und verschieben sich nicht unschön.
+HTML
+
 <ul class="float-Holder">
   <li class="float-Element float-Highlight float-All">
     <a data-scroll='top' class="float-Contents">
@@ -7,16 +12,19 @@
   <li class="float-Element float-Lowlight float-Physics">
     <a data-scroll='top' class="float-Contents">
       <h2>Physics <img src="../assets/icons/physics_research.png" class="float-Image"> </h2>
+      <span id="counter-physics" class="nav-counter counter-blue">Tier 1 (0/6)</span>
     </a>
   </li>
   <li class="float-Element float-Lowlight float-Society">
     <a data-scroll='top' class="float-Contents">
       <h2>Society <img src="../assets/icons/society_research.png" class="float-Image"> </h2>
+      <span id="counter-society" class="nav-counter counter-green">Tier 1 (0/6)</span>
     </a>
   </li>
   <li class="float-Element float-Lowlight float-Engineering">
     <a data-scroll='top' class="float-Contents">
       <h2>Engineering <img src="../assets/icons/engineering_research.png" class="float-Image"> </h2>
+      <span id="counter-engineering" class="nav-counter counter-green">Tier 1 (0/6)</span>
     </a>
   </li>
   <li class="float-Element float-Lowlight float-Anomalies">
