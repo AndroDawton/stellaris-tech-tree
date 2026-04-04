@@ -414,26 +414,25 @@ function toggleHideChildren(area, nodeHTMLid, shouldHide) {
 // Funktion 3: NEUER LIVE-TIER-ZÄHLER
 // ==========================================
 function updateTierCounters() {
-    // Wir bereiten Zähler für alle 5 Tiers vor
     let tierCounts = {
         'physics':     { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 },
         'society':     { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 },
         'engineering': { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 }
     };
 
-    // Gehe durch alle aktiven (grünen) Kacheln
+    // Gehe durch alle aktiven Kacheln
     $('.node.active').each(function() {
         let $node = $(this);
-        let tierText = $node.find('.tier').text().trim(); // Holt die nackte Zahl z.B. "1", "2", "3"
+        let tierText = $node.find('.tier').text().trim(); // Holt z.B. "1", "2"
+        let tierNumber = parseInt(tierText);
         
         let currentArea = '';
-        if ($node.parents('#tech-tree-physics').length > 0) currentArea = 'physics';
-        else if ($node.parents('#tech-tree-society').length > 0) currentArea = 'society';
-        else if ($node.parents('#tech-tree-engineering').length > 0) currentArea = 'engineering';
+        if ($node.hasClass('physics')) currentArea = 'physics';
+        else if ($node.hasClass('society')) currentArea = 'society';
+        else if ($node.hasClass('engineering')) currentArea = 'engineering';
 
-        // Wenn wir im richtigen Bereich sind und das Tier eine Zahl zwischen 1 und 5 ist
-        if (currentArea !== '' && ['1', '2', '3', '4', '5'].includes(tierText)) {
-            let tierNumber = parseInt(tierText);
+        // Wenn Bereich gefunden und das Tier eine gültige Zahl von 1-5 ist
+        if (currentArea !== '' && tierNumber >= 1 && tierNumber <= 5) {
             tierCounts[currentArea][tierNumber]++;
         }
     });
@@ -443,27 +442,24 @@ function updateTierCounters() {
     areas.forEach(area => {
         let currentTier = 1;
         
-        // Wir prüfen der Reihe nach, ob die Hürde von 6 Forschungen für das nächste Tier geknackt wurde.
-        // Wenn du 6 Forschungen in Tier 1 hast -> Wechsel zu Tier 2.
-        // Wenn du dann 6 Forschungen in Tier 2 hast -> Wechsel zu Tier 3, usw.
+        // Stufen-Logik (Prüfen auf jeweils 6 Forschungen)
         for (let t = 1; t < 5; t++) {
             if (tierCounts[area][t] >= 6) {
                 currentTier = t + 1;
             } else {
-                // Sobald eine Stufe die 6 nicht erreicht, brechen wir ab und bleiben auf diesem Tier
                 break;
             }
         }
         
-        // Den Text für die Navigationsleiste zusammenbauen
         let countForDisplay = tierCounts[area][currentTier];
         let label = `Tier ${currentTier} (${countForDisplay}/6)`;
         
-        // Spezieller Fall: Wenn man Tier 5 erreicht hat, gibt es kein Tier 6 mehr zum Freischalten.
+        // Spezialfall für Tier 5
         if (currentTier === 5) {
             label = `Tier 5 (${countForDisplay})`;
         }
         
         $(`#counter-${area}`).text(label);
     });
+}
 }
