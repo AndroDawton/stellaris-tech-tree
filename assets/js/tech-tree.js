@@ -233,7 +233,7 @@ function load_tree() {
             });
         }
     });
-    $.getJSON('anomalies.json', function(jsonData) {
+        $.getJSON('anomalies.json', function(jsonData) {
         // Event techs don't really need a Tree
         $(jsonData).each(function(index, item) {
             setup(item);
@@ -243,9 +243,19 @@ function load_tree() {
             e.addClass("node").addClass("tech").addClass("anomaly");
             $('#tech-tree-anomalies').append(e);
         });
+
+        // FIX: Bilder für Anomalien manuell laden (Lozad-Umgehung)
+        $('#tech-tree-anomalies find img[data-src]').each(function() {
+            var src = $(this).attr('data-src');
+            if (src) {
+                $(this).attr('src', src);
+            }
+        });
+
         init_nodestatus('anomalies');
         init_tooltips();
     });
+
     if(window.indexedDB) {
         initDB();
     }
