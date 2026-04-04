@@ -1414,7 +1414,7 @@
             "(×<b style='color:lime'>1.5</b>) Has Enigmatic Engineering Ascension Perk",
             "(×<b style='color:lime'>2.0</b>) Any Owned Planet<br/>    •   Is Synaptic Lathe<br/>    •   Pop count is greater than 5000"
           ],
-          "potential": [],
+          "potential": ["Has DLC The Machine Age"],
           "children": [
             {
               "key": "tech_fe_singularity_2",
@@ -1444,7 +1444,7 @@
               "weight_modifiers": [
                 "(×<b style='color:red'>0.0</b>) Does NOT have Cosmogenesis Ascension Perk"
               ],
-              "potential": [],
+              "potential": ["Has DLC The Machine Age"],
               "children": [],
               "is_event": false,
               "source": "vanilla"
@@ -1792,7 +1792,7 @@
                     "(×<b style='color:lime'>5.0</b>) Has Subterfuge Traditions Tradition"
                   ],
                   "potential": [
-                    "Has DLC First Contact Story Pack"
+                    "Has DLC First Contact"
                   ],
                   "children": [
                     {
@@ -1832,7 +1832,7 @@
                         "(×<b style='color:lime'>5.0</b>) Has Subterfuge Traditions Tradition"
                       ],
                       "potential": [
-                        "Has DLC First Contact Story Pack"
+                        "Has DLC First Contact"
                       ],
                       "children": [
                         {
@@ -1871,7 +1871,7 @@
                             "(×<b style='color:lime'>5.0</b>) Has Subterfuge Traditions Tradition"
                           ],
                           "potential": [
-                            "Has DLC First Contact Story Pack"
+                            "Has DLC First Contact"
                           ],
                           "children": [
                             {
@@ -1908,7 +1908,7 @@
                                 "(×<b style='color:lime'>1.25</b>) Any Leader in council has trait Curator 1",
                                 "(×<b style='color:lime'>5.0</b>) Has Subterfuge Traditions Tradition"
                               ],
-                              "potential": [],
+                              "potential": ["Has DLC First Contact"],
                               "children": [],
                               "is_event": false,
                               "source": "vanilla"
@@ -2614,7 +2614,7 @@
             "(×<b style='color:lime'>1.5</b>) Has Enigmatic Engineering Ascension Perk",
             "(×<b style='color:lime'>2.0</b>) Any Owned Planet<br/>    •   Is Synaptic Lathe<br/>    •   Pop count is greater than 5000"
           ],
-          "potential": [],
+          "potential": ["Has DLC The Machine Age"],
           "children": [
             {
               "key": "tech_fe_silo_2",
@@ -2644,7 +2644,7 @@
               "weight_modifiers": [
                 "(×<b style='color:red'>0.0</b>) Does NOT have Cosmogenesis Ascension Perk"
               ],
-              "potential": [],
+              "potential": ["Has DLC The Machine Age"],
               "children": [],
               "is_event": false,
               "source": "vanilla"
@@ -3790,7 +3790,7 @@
                 "(×<b style='color:lime'>5.0</b>) Has Subterfuge Traditions Tradition"
               ],
               "potential": [
-                "Has DLC First Contact Story Pack"
+                "Has DLC First Contact"
               ],
               "children": [
                 {
@@ -3829,7 +3829,7 @@
                     "(×<b style='color:lime'>5.0</b>) Has Subterfuge Traditions Tradition"
                   ],
                   "potential": [
-                    "Has DLC First Contact Story Pack"
+                    "Has DLC First Contact"
                   ],
                   "children": [],
                   "is_event": false,
@@ -3866,7 +3866,7 @@
                     "(×<b style='color:lime'>5.0</b>) Has Subterfuge Traditions Tradition"
                   ],
                   "potential": [
-                    "Has DLC First Contact Story Pack"
+                    "Has DLC First Contact"
                   ],
                   "children": [],
                   "is_event": false,
@@ -4085,7 +4085,7 @@
             "(×<b style='color:lime'>1.5</b>) Has Enigmatic Engineering Ascension Perk",
             "(×<b style='color:lime'>2.0</b>) Any Owned Planet<br/>    •   Is Synaptic Lathe<br/>    •   Pop count is greater than 5000"
           ],
-          "potential": [],
+          "potential": ["Has DLC The Machine Age"],
           "children": [
             {
               "key": "tech_fe_lab_2",
@@ -4115,7 +4115,7 @@
               "weight_modifiers": [
                 "(×<b style='color:red'>0.0</b>) Does NOT have Cosmogenesis Ascension Perk"
               ],
-              "potential": [],
+              "potential": ["Has DLC The Machine Age"],
               "children": [],
               "is_event": false,
               "source": "vanilla"
@@ -4145,7 +4145,7 @@
           "prerequisites_names": [],
           "weight_modifiers": [],
           "potential": [
-            "Has DLC First Contact Story Pack"
+            "Has DLC First Contact"
           ],
           "children": [],
           "is_event": false,
@@ -4362,7 +4362,8 @@
             "(×<b style='color:red'>0.0</b>) All must be false<br/>    •   Any Leader in council has trait Curator 1<br/>    •   Has the Curator Insight modifier"
           ],
           "potential": [
-            "Does NOT have DLC Ancient Relics Story Pack"
+            "Does NOT have DLC Ancient Relics Story Pack",
+            "Has DLC Leviathans\n Has DLC Distant Stars\n Has DLC Grand Archive"
           ],
           "children": [],
           "is_event": false,
@@ -4391,7 +4392,7 @@
             "(×<b style='color:lime'>3.0</b>) Any Leader in council has trait Curator 1",
             "(×<b style='color:red'>0.0</b>) All must be false<br/>    •   Any Leader in council has trait Curator 1<br/>    •   Has the Curator Insight modifier"
           ],
-          "potential": [],
+          "potential": ["Has DLC Leviathans\n Has DLC Distant Stars\n Has DLC Grand Archive"],
           "children": [],
           "is_event": false,
           "source": "vanilla"
