@@ -571,11 +571,6 @@ span.tier-5 {
     line-height: 1;
 }
 
-/* Blendet die o- und x-Buttons im Anomalie-Tab komplett aus */
-#tech-tree-anomalies .tech-controls {
-    display: none !important;
-}
-
 .btn-dim-tree, .btn-hide-tree {
     cursor: pointer;
     margin-left: 6px;
