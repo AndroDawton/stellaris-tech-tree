@@ -540,7 +540,7 @@
           "is_rare": false,
           "is_start_tech": true,
           "prerequisites": [],
-          "tier": 1,
+          "tier": 0,
           "prerequisites_names": [],
           "weight_modifiers": [],
           "potential": [
@@ -692,7 +692,7 @@
           "is_rare": false,
           "is_start_tech": true,
           "prerequisites": [],
-          "tier": 1,
+          "tier": 0,
           "prerequisites_names": [],
           "weight_modifiers": [],
           "potential": [
@@ -882,7 +882,7 @@
           "is_rare": false,
           "is_start_tech": true,
           "prerequisites": [],
-          "tier": 1,
+          "tier": 0,
           "prerequisites_names": [],
           "weight_modifiers": [],
           "potential": [
@@ -1693,7 +1693,7 @@
           "is_rare": false,
           "is_start_tech": true,
           "prerequisites": [],
-          "tier": 1,
+          "tier": 0,
           "prerequisites_names": [],
           "weight_modifiers": [
             "(×<b style='color:red'>0.1</b>) NOT Number of years since game start is greater than 10",
