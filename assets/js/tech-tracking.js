@@ -54,10 +54,47 @@ function init_nodestatus(area) {
                     event.stopPropagation();
                     return;
                 }
+                    // 2. DAS ORIGINAL-VERHALTEN (unverändert, nur mit Schutz für Anomalien!)
+    $areaContainer.find('.node div.node-status:not(.status-loaded)').each(function() {
+        var events = $._data($( this )[0], "events");
+
+        if(undefined === events || undefined === events.click) {
+            $(this).on('click', function toggle_status() {
+                // Find chart for the research
+                if($(this).parent().hasClass('anomaly')) {
+                    if($(this).hasClass('active')) {
+                        $(this).removeClass('active');
+                        $(this).parent().removeClass('active');
+                    } else {
+                        $(this).addClass('active');
+                        $(this).parent().addClass('active');
+                    }
+
+                    event.stopPropagation();
+                    return;
+                }
+                
+                // --- AB HIER IST NEU: SCHUTZ FÜR ANOMALIEN ---
+                // Anomalien haben keine Bäume und keine Eltern!
+                if (area === 'anomalies') {
+                    var id = $( this ).parent().attr('id');
+                    if($(this).hasClass('active')) {
+                        $(this).removeClass('active');
+                        $(this).parent().removeClass('active');
+                    } else {
+                        $(this).addClass('active');
+                        $(this).parent().addClass('active');
+                    }
+                    event.stopPropagation();
+                    return;
+                }
+                // --- ENDE DES SCHUTZES ---
+
                 // Limmit activation to research directly under an activated parent
                 var parent_id = $(this).parent().data('treenode').parentId;
                 if(undefined === parent_id) {
                     return;
+ 
                 }
                 // If the parent is the root node [0], this is the first research that can be activated
                 if(0 < parent_id) {
