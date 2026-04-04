@@ -557,3 +557,69 @@ span.tier-4 {
 span.tier-5 {
     color: #990000;
 }
+.node {
+    position: relative;
+}
+
+.tech-controls {
+    position: absolute;
+    top: 2px;
+    right: 5px;
+    font-family: monospace;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.btn-dim-tree, .btn-hide-tree {
+    cursor: pointer;
+    margin-left: 6px;
+    padding: 0 3px;
+    color: #888;
+    transition: color 0.2s;
+}
+
+.btn-dim-tree:hover {
+    color: #ffb000;
+}
+
+.btn-hide-tree:hover {
+    color: #ff0000;
+}
+
+.node.tech-dimmed {
+    opacity: 0.25 !important;
+    pointer-events: none;
+}
+
+.node.tech-dimmed .tech-controls {
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.tech-hidden {
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+} 
+
+/* Die Zähler rechts neben der Suche */
+.nav-counter {
+    display: inline-block;
+    font-size: 12px;
+    font-family: 'Arimo', Verdana; 
+    font-weight: bold;
+    margin-left: 15px; 
+}
+
+.counter-blue {
+    color: #4396E2 !important; /* Originales Stellaris-Blau */
+}
+
+.counter-green {
+    color: #5ACA9C !important; /* Originales Stellaris-Grün */
+}
+
+.counter-orange {
+    color: #E29C43 !important; /* Originales Stellaris-Orange */
+}
