@@ -238,6 +238,7 @@ function load_tree() {
         $(jsonData).each(function(index, item) {
             setup(item);
             var e = $("<div>").html(item.innerHTML);
+			e.find('.tech-controls').remove();
             e.attr("id", item.key);
             e.attr("class",item.HTMLclass)
             e.addClass("node").addClass("tech").addClass("anomaly");
