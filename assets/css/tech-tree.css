@@ -624,23 +624,29 @@ span.tier-5 {
     color: #E29C43 !important; /* Originales Stellaris-Orange */
 }
 
-/* Der Haupt-Tab kriegt eine relative Positionierung */
-.dlc-main-tab {
-    position: relative !important;
-}
-
-/* Das ausklappbare Menü – MITTIG AUSGERICHTET */
+/* Das ausklappbare Menü – JETZT DOPPELT SO BREIT & MITTIG */
 .dlc-dropdown-menu {
     display: none;
     position: absolute;
-    top: 100%; /* Direkt unter der Navbar */
-    left: 50%; /* Schiebt die linke Kante in die Mitte des Tabs */
-    transform: translateX(-50%); /* Zieht das Menü um die Hälfte seiner eigenen Breite nach links zurück */
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
     background: #222;
     border: 1px solid #5ACA9C;
     z-index: 99999;
-    min-width: 220px; /* Etwas breiter, damit Text und Bild gut Platz haben */
+    
+    /* Hier ist die Magie für die zwei Spalten */
+    width: 450px; 
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Zwei gleich große Spalten */
+    
     box-shadow: 0px 4px 10px rgba(0,0,0,0.5);
+}
+
+/* Der "All DLC"-Eintrag soll über die gesamte Breite (beide Spalten) gehen */
+.dlc-dropdown-item[data-dlc="all"] {
+    grid-column: span 2;
+    border-bottom: 2px solid #333; /* Etwas dickere Trennlinie */
 }
 
 /* Die einzelnen Zeilen im Menü */
@@ -652,43 +658,37 @@ span.tier-5 {
     color: #fff;
     cursor: pointer;
     border-bottom: 1px solid #333;
+    border-right: 1px solid #333; /* Trennung zwischen den Spalten */
     font-family: 'Arimo', Verdana, sans-serif;
     font-size: 13px;
-    transition: all 0.2s ease; /* Macht das Ausgrauen geschmeidig */
+    transition: all 0.2s ease;
 }
 
-/* Letztes Element braucht keinen unteren Rahmen */
-.dlc-dropdown-item:last-child {
+/* Die rechten Spalten-Elemente brauchen keinen rechten Rahmen */
+.dlc-dropdown-item:nth-child(2n) {
+    border-right: none;
+}
+
+/* Die letzten beiden Elemente brauchen keinen unteren Rahmen */
+.dlc-dropdown-item:nth-last-child(1),
+.dlc-dropdown-item:nth-last-child(2) {
     border-bottom: none;
 }
 
-/* Hover-Effekt für die Menü-Einträge */
+/* Hover-Effekt */
 .dlc-dropdown-item:hover {
     background-color: #333 !important;
 }
 
-/* Die kleinen DLC-Icons im Menü */
-.dlc-mini-icon {
-    width: 24px;
-    height: 24px;
-    object-fit: contain;
-}
-
-/* ==========================================
-   KLASSEN FÜR AKTIV & DEAKTIVIERT
-   ========================================== */
-
-/* Wenn ein DLC aktiv ist (Normalzustand) */
+/* KLASSEN FÜR AKTIV & DEAKTIVIERT */
 .dlc-dropdown-item.dlc-active {
-    color: #5ACA9C; /* Stellaris-Grün für den Text */
+    color: #5ACA9C;
 }
 
-/* Wenn ein DLC deaktiviert/ausgegraut wird */
 .dlc-dropdown-item.dlc-disabled {
-    color: #555 !important; /* Dunkelgrauer Text */
+    color: #555 !important;
 }
 
-/* Macht auch das Bild blasser und schwarz-weiß, wenn deaktiviert */
 .dlc-dropdown-item.dlc-disabled .dlc-mini-icon {
     opacity: 0.3;
     filter: grayscale(100%);
