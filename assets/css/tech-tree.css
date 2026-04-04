@@ -696,12 +696,7 @@ span.tier-5 {
 
 /* Das DLC Tab in der Navbar bekommt runde Ecken an allen 4 Seiten */
 .float-Element.dlc-main-tab {
-    border-radius: 10px !important; /* Ovaler Look */
+    border-radius: 20px !important; /* Ovaler Look */
     overflow: visible !important;   /* Damit das Menü nicht abgeschnitten wird */
     transition: background-color 0.2s ease;
-}
-
-/* Innenabstand für das Oval anpassen, damit es harmonisch aussieht */
-.float-Element.dlc-main-tab .float-Contents {
-    border-radius: 10px !important;
 }
