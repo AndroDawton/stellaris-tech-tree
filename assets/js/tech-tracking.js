@@ -4,6 +4,18 @@ var charts = {};
 function init_nodestatus(area) {
     var $areaContainer = $('#tech-tree-' + area);
 
+    // Wir hängen die Buttons nur an echte Kacheln 
+    // und ignorieren den Haupt-Container!
+    $areaContainer.find('.node.tech').each(function() {
+        // Falls noch keine Controls da sind, fügen wir sie ein
+        if ($(this).find('.tech-controls').length === 0) {
+            $(this).append('<div class="tech-controls"><span class="btn-dim-tree" title="Zweig ausgrauen">o</span><span class="btn-hide-tree" title="Zweig verstecken">x</span></div>');
+        }
+    });
+
+    // 1. UNSERE NEUEN STEUERUNGSELEMENTE BINDEN
+    // Klick auf "o" (Ausgrauen)
+
     // 1. UNSERE NEUEN STEUERUNGSELEMENTE BINDEN
     // Klick auf "o" (Ausgrauen)
     $areaContainer.on('click', '.btn-dim-tree', function(event) {
