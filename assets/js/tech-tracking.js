@@ -106,6 +106,9 @@ function init_nodestatus(area) {
             $( this ).addClass('status-loaded');
         }
     });
+    
+    // Zähler beim ersten Laden der Seite einmalig berechnen
+    updateTierCounters();
 } // Hier endet init_nodestatus korrekt
 
 function getNodeDBNode(area, name) {
@@ -153,6 +156,9 @@ function updateResearch(area, name, active) {
             updateResearch(area, child_node.nodeHTMLid, false);
         }
     }
+    
+    // LIVE-ZÄHLER TRIGGER: Ruft die Zählung auf, sobald etwas geklickt wird!
+    updateTierCounters();
 }
 
 function getInitNode(node, name) {
@@ -402,4 +408,46 @@ function toggleHideChildren(area, nodeHTMLid, shouldHide) {
 
         toggleHideChildren(area, child_node.nodeHTMLid, shouldHide);
     }
+}
+
+// ==========================================
+// Funktion 3: NEUER LIVE-TIER-ZÄHLER
+// ==========================================
+function updateTierCounters() {
+    let tier1Counts = { 'physics': 0, 'society': 0, 'engineering': 0 };
+    let tier2Counts = { 'physics': 0, 'society': 0, 'engineering': 0 };
+
+    // Gehe durch alle aktiven (grünen) Kacheln
+    $('.node.active').each(function() {
+        let $node = $(this);
+        let tierText = $node.find('.tier').text();
+        
+        let currentArea = '';
+        if ($node.parents('#tech-tree-physics').length > 0) currentArea = 'physics';
+        else if ($node.parents('#tech-tree-society').length > 0) currentArea = 'society';
+        else if ($node.parents('#tech-tree-engineering').length > 0) currentArea = 'engineering';
+
+        if (currentArea !== '') {
+            if (tierText.includes('Tier 1')) {
+                tier1Counts[currentArea]++;
+            } else if (tierText.includes('Tier 2')) {
+                tier2Counts[currentArea]++;
+            }
+        }
+    });
+
+    // Bestimme für jeden Bereich das anzuzeigende Tier und die Zahlen
+    let areas = ['physics', 'society', 'engineering'];
+    
+    areas.forEach(area => {
+        let label = '';
+        
+        if (tier1Counts[area] < 6) {
+            label = `Tier 1 (${tier1Counts[area]}/6)`;
+        } else {
+            label = `Tier 2 (${tier2Counts[area]}/6)`;
+        }
+        
+        $(`#counter-${area}`).text(label);
+    });
 }
