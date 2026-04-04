@@ -624,27 +624,37 @@ span.tier-5 {
     color: #E29C43 !important; /* Originales Stellaris-Orange */
 }
 
-/* Das ausklappbare Menü selbst */
+/* Der Haupt-Tab kriegt eine relative Positionierung */
+.dlc-main-tab {
+    position: relative !important;
+}
+
+/* Das ausklappbare Menü – MITTIG AUSGERICHTET */
 .dlc-dropdown-menu {
-    display: none; /* Standardmäßig unsichtbar */
+    display: none;
     position: absolute;
-    top: 100%; /* Dockt direkt unten an der Navbar an */
-    left: 0;
+    top: 100%; /* Direkt unter der Navbar */
+    left: 50%; /* Schiebt die linke Kante in die Mitte des Tabs */
+    transform: translateX(-50%); /* Zieht das Menü um die Hälfte seiner eigenen Breite nach links zurück */
     background: #222;
     border: 1px solid #5ACA9C;
     z-index: 99999;
-    min-width: 200px;
+    min-width: 220px; /* Etwas breiter, damit Text und Bild gut Platz haben */
     box-shadow: 0px 4px 10px rgba(0,0,0,0.5);
 }
 
 /* Die einzelnen Zeilen im Menü */
 .dlc-dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
     padding: 10px;
     color: #fff;
     cursor: pointer;
     border-bottom: 1px solid #333;
     font-family: 'Arimo', Verdana, sans-serif;
     font-size: 13px;
+    transition: all 0.2s ease; /* Macht das Ausgrauen geschmeidig */
 }
 
 /* Letztes Element braucht keinen unteren Rahmen */
@@ -652,12 +662,34 @@ span.tier-5 {
     border-bottom: none;
 }
 
-/* "Alle anzeigen" startet in grün */
-.dlc-all-active {
-    color: #5ACA9C;
-    font-weight: bold;
-}
-
 /* Hover-Effekt für die Menü-Einträge */
 .dlc-dropdown-item:hover {
-    background-color: #333
+    background-color: #333 !important;
+}
+
+/* Die kleinen DLC-Icons im Menü */
+.dlc-mini-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+/* ==========================================
+   KLASSEN FÜR AKTIV & DEAKTIVIERT
+   ========================================== */
+
+/* Wenn ein DLC aktiv ist (Normalzustand) */
+.dlc-dropdown-item.dlc-active {
+    color: #5ACA9C; /* Stellaris-Grün für den Text */
+}
+
+/* Wenn ein DLC deaktiviert/ausgegraut wird */
+.dlc-dropdown-item.dlc-disabled {
+    color: #555 !important; /* Dunkelgrauer Text */
+}
+
+/* Macht auch das Bild blasser und schwarz-weiß, wenn deaktiviert */
+.dlc-dropdown-item.dlc-disabled .dlc-mini-icon {
+    opacity: 0.3;
+    filter: grayscale(100%);
+}
