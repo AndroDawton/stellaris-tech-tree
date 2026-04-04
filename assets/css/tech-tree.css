@@ -628,11 +628,6 @@ span.tier-5 {
     display: none;
 }
 
-/* Sobald die Maus über das DLC-Listenelement fährt, wird es sichtbar */
-.dlc-main-tab:hover .dlc-dropdown-menu {
-    display: block !important;
-}
-
 /* Stellt sicher, dass das Menü ÜBER den Kacheln schwebt */
 .dlc-dropdown-menu {
     z-index: 99999 !important;
