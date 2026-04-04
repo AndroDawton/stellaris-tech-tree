@@ -369,19 +369,26 @@ function toggleHideChildren(area, nodeHTMLid, shouldHide) {
         $parentEl.removeClass('tech-dimmed');
     }
 
+    for (const child of inode.children) {
+        var child_node = charts[area].tree.nodeDB.db[child];
         var $childEl = $('#' + child_node.nodeHTMLid);
         
-        // KORREKTUR: Wir greifen auf das erste Element [0] des Connectors zu!
+        // Wir holen die Linie
         var myConnector = child_node.connector && child_node.connector[0];
 
         if (shouldHide) {
             $childEl.addClass('tech-hidden');
-            if (myConnector) $(myConnector).css('display', 'none');
+            // Wir geben der Linie direkt die Klasse zum Verstecken!
+            if (myConnector) $(myConnector).addClass('tech-hidden');
         } else {
             $childEl.removeClass('tech-hidden');
-            if (myConnector) $(myConnector).css('display', '');
+            if (myConnector) $(myConnector).removeClass('tech-hidden');
         }
 
+        // Da wir uns hier selbst wieder aufrufen, wird das für JEDES Kind
+        // und JEDEN Enkel im gesamten Zweig gemacht!
         toggleHideChildren(area, child_node.nodeHTMLid, shouldHide);
     }
+}
+
 }
