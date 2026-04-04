@@ -1,6 +1,9 @@
 // Add ability to track node status
 var charts = {};
 
+// Globales Array, um zu tracken, welche DLCs gerade ausgegraut/deaktiviert sind
+var disabledDLCs = [];
+
 function init_nodestatus(area) {
     var $areaContainer = $('#tech-tree-' + area);
 
@@ -110,27 +113,56 @@ function init_nodestatus(area) {
     // Zähler beim ersten Laden der Seite einmalig berechnen
     updateTierCounters();
 
-    // REINES KLICK-TEST-SKRIPT FÜR DAS MENÜ
+    // ==========================================
+    // NEU: DIE FUNKTIONIERENDE KLICK-LOGIK FÜR DIE DLCS
+    // ==========================================
     if (!$('.dlc-main-tab').data('bound-toggle')) {
-        // Klick auf den DLC-Haupttab
+        
+        // 1. Menü auf- und zuklappen
         $('.dlc-main-tab > a').on('click', function(event) {
             event.preventDefault();
-            event.stopPropagation(); // Verhindert, dass der Klick direkt wieder vom Dokument abgefangen wird
-            
-            var $menu = $('.dlc-dropdown-menu');
-            
-            // Toggle: Wenn sichtbar -> ausblenden, wenn unsichtbar -> einblenden
-            if ($menu.is(':visible')) {
-                $menu.fadeOut(150);
+            event.stopPropagation();
+            $('.dlc-dropdown-menu').toggleClass('is-visible').fadeToggle(150);
+        });
+
+        // 2. Klicks auf die DLC-Einträge (Ausgrauen/Aktivieren)
+        $('.dlc-dropdown-item').on('click', function(event) {
+            event.preventDefault();
+            var $clickedItem = $(this);
+            var selectedDLC = $clickedItem.data('dlc');
+
+            if (selectedDLC === 'all') {
+                // Wenn "All DLC" geklickt wird: Alles wieder aktivieren!
+                $('.dlc-dropdown-item').removeClass('dlc-disabled');
+                $clickedItem.addClass('dlc-active');
+                disabledDLCs = []; // Array zurücksetzen
             } else {
-                $menu.fadeIn(150);
+                // "All DLC" verliert den aktiven Status, wenn man ein einzelnes DLC filtert
+                $('.dlc-dropdown-item[data-dlc="all"]').removeClass('dlc-active');
+                
+                // Toggle: Wenn aktiv -> ausgrauen, wenn ausgegraut -> wieder aktiv
+                $clickedItem.toggleClass('dlc-disabled');
+
+                // Aktualisiere das globale Array der deaktivierten DLCs
+                disabledDLCs = [];
+                $('.dlc-dropdown-item.dlc-disabled').each(function() {
+                    disabledDLCs.push($(this).data('dlc'));
+                });
+
+                // Falls am Ende KEIN DLC mehr ausgegraut ist, schalten wir "All DLC" automatisch an
+                if (disabledDLCs.length === 0) {
+                    $('.dlc-dropdown-item[data-dlc="all"]').addClass('dlc-active');
+                }
             }
+
+            // Jetzt rufen wir die Filterfunktion auf!
+            applyDLCFilterToTree();
         });
 
         // Schließen, wenn man irgendwo anders auf der Seite hinklickt
         $(document).on('click', function(event) {
             if (!$(event.target).closest('.dlc-main-tab').length) {
-                $('.dlc-dropdown-menu').fadeOut(150);
+                $('.dlc-dropdown-menu').removeClass('is-visible').fadeOut(150);
             }
         });
 
@@ -219,10 +251,8 @@ function initDB() {
         offlineDB.onerror = function(event) {
             console.error("IndexedDB error: " + event.target.errorCode);
         };
-        offlineDB.onupgradeneeded = function(event) {
-            offlineDB.onversionchange = function(event) {
-                offlineDB.close();
-            };
+        offlineDB.onversionchange = function(event) {
+            offlineDB.close();
         };
         findLists();
     };
@@ -492,5 +522,58 @@ function updateTierCounters() {
         }
         
         $(`#counter-${area}`).text(label);
+    });
+}
+
+// ==========================================
+// NEU: DIE FILTER-FUNKTION FÜR DEN TECH-TREE
+// ==========================================
+function applyDLCFilterToTree() {
+    // 1. Zuerst alle Kacheln und Verbindungslinien wieder sichtbar machen
+    $('.node.tech').removeClass('dlc-hidden');
+    $('.Treant > svg path').removeClass('dlc-hidden');
+
+    // Wenn keine DLCs deaktiviert sind (Array ist leer), müssen wir nicht weiter filtern!
+    if (disabledDLCs.length === 0) return;
+
+    // 2. Wir gehen jede Technologie-Kachel auf dem Bildschirm durch
+    $('.node.tech').each(function() {
+        var $node = $(this);
+        var isExclusivelyHidden = false;
+
+        // Wir scannen den Textinhalt der Kachel (z.B. Tooltips) nach DLC-Bedingungen
+        $node.find('.tooltip-content').each(function() {
+            var content = $(this).text();
+            
+            // Wenn die Technologie ein DLC erfordert...
+            if (content.includes('Has DLC')) {
+                // ...prüfen wir, ob dieses DLC gerade in unserer "Ausgegraut"-Liste steht
+                disabledDLCs.forEach(function(disabledDlc) {
+                    if (content.includes('Has DLC ' + disabledDlc)) {
+                        isExclusivelyHidden = true;
+                    }
+                });
+            }
+        });
+
+        // 3. Wenn das geforderte DLC deaktiviert wurde, blenden wir die Kachel aus
+        if (isExclusivelyHidden) {
+            $node.addClass('dlc-hidden');
+            
+            // Auch die dünnen Verbindungslinien (Konnektoren) im SVG müssen weg
+            var area = '';
+            if ($node.hasClass('physics')) area = 'physics';
+            else if ($node.hasClass('society')) area = 'society';
+            else if ($node.hasClass('engineering')) area = 'engineering';
+            
+            var id = $node.attr('id');
+            if (area !== '' && id) {
+                // Holt das Node-Objekt aus deiner Treant-Datenbank
+                var inode = getNodeDBNode(area, id);
+                if (inode && inode.connector && inode.connector[0]) {
+                    $(inode.connector[0]).addClass('dlc-hidden');
+                }
+            }
+        }
     });
 }
