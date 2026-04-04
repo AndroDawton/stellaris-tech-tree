@@ -2057,7 +2057,7 @@
             "(×<b style='color:lime'>1.5</b>) Has Enigmatic Engineering Ascension Perk",
             "(×<b style='color:lime'>2.0</b>) Any Owned Planet<br/>    •   Is Synaptic Lathe<br/>    •   Pop count is greater than 5000"
           ],
-          "potential": [],
+          "potential": ["Has DLC The Machine Age"],
           "children": [
             {
               "key": "tech_fe_forge_2",
@@ -2087,7 +2087,7 @@
               "weight_modifiers": [
                 "(×<b style='color:red'>0.0</b>) Does NOT have Cosmogenesis Ascension Perk"
               ],
-              "potential": [],
+              "potential": ["Has DLC The Machine Age"],
               "children": [],
               "is_event": false,
               "source": "vanilla"
@@ -2775,7 +2775,7 @@
             "(×<b style='color:lime'>1.5</b>) Has Fanatic Militarist Ethic"
           ],
           "potential": [
-            "Country uses biological ships"
+            "Has to be ture\n Country uses biological ships\n Has DLC BioGenesis"
           ],
           "children": [
             {
@@ -2808,7 +2808,7 @@
                 "(×<b style='color:lime'>1.5</b>) Has Fanatic Militarist Ethic"
               ],
               "potential": [
-                "Country uses biological ships"
+                "Has to be ture\n Country uses biological ships\n Has DLC BioGenesis"
               ],
               "children": [],
               "is_event": false,
@@ -2843,7 +2843,7 @@
             "(×<b style='color:lime'>1.5</b>) Has Enigmatic Engineering Ascension Perk",
             "(×<b style='color:lime'>2.0</b>) Any Owned Planet<br/>    •   Is Synaptic Lathe<br/>    •   Pop count is greater than 5000"
           ],
-          "potential": [],
+          "potential": ["    •   Has DLC The Machine Age"],
           "children": [
             {
               "key": "tech_fe_mine_2",
@@ -2873,7 +2873,7 @@
               "weight_modifiers": [
                 "(×<b style='color:red'>0.0</b>) Does NOT have Cosmogenesis Ascension Perk"
               ],
-              "potential": [],
+              "potential": ["    •   Has DLC The Machine Age"],
               "children": [],
               "is_event": false,
               "source": "vanilla"
@@ -2907,7 +2907,7 @@
             "(×<b style='color:lime'>1.5</b>) Has Enigmatic Engineering Ascension Perk",
             "(×<b style='color:lime'>2.0</b>) Any Owned Planet<br/>    •   Is Synaptic Lathe<br/>    •   Pop count is greater than 5000"
           ],
-          "potential": [],
+          "potential": ["    •   Has DLC The Machine Age"],
           "children": [
             {
               "key": "tech_fe_fabricator_2",
@@ -2937,7 +2937,7 @@
               "weight_modifiers": [
                 "(×<b style='color:red'>0.0</b>) Does NOT have Cosmogenesis Ascension Perk"
               ],
-              "potential": [],
+              "potential": ["Has DLC The Machine Age"],
               "children": [],
               "is_event": false,
               "source": "vanilla"
@@ -6315,7 +6315,7 @@
             "(×<b style='color:red'>0.0</b>) No System within borders<br/>    •   Any Planet<br/>\t    •   Has £nanites£ Nanites greater than 0"
           ],
           "potential": [
-            "Has DLC Distant Stars Story Pack"
+            "Has DLC Distant Stars"
           ],
           "children": [],
           "is_event": false,
