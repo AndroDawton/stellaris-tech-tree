@@ -390,5 +390,3 @@ function toggleHideChildren(area, nodeHTMLid, shouldHide) {
         toggleHideChildren(area, child_node.nodeHTMLid, shouldHide);
     }
 }
-
-}
