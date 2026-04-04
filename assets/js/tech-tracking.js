@@ -126,38 +126,56 @@ function init_nodestatus(area) {
         });
 
         // 2. Klicks auf die DLC-Einträge (Ausgrauen/Aktivieren)
-        $('.dlc-dropdown-item').on('click', function(event) {
-            event.preventDefault();
-            var $clickedItem = $(this);
-            var selectedDLC = $clickedItem.data('dlc');
+$('.dlc-dropdown-item').on('click', function(event) {
+    event.preventDefault();
+    var $clickedItem = $(this);
+    var selectedDLC = $clickedItem.data('dlc');
 
-            if (selectedDLC === 'all') {
-                // Wenn "All DLC" geklickt wird: Alles wieder aktivieren!
-                $('.dlc-dropdown-item').removeClass('dlc-disabled');
-                $clickedItem.addClass('dlc-active');
-                disabledDLCs = []; // Array zurücksetzen
-            } else {
-                // "All DLC" verliert den aktiven Status, wenn man ein einzelnes DLC filtert
-                $('.dlc-dropdown-item[data-dlc="all"]').removeClass('dlc-active');
-                
-                // Toggle: Wenn aktiv -> ausgrauen, wenn ausgegraut -> wieder aktiv
-                $clickedItem.toggleClass('dlc-disabled');
+    if (selectedDLC === 'all') {
+        // --- DER NEUE TOGGLE-EFFEKT ---
+        
+        // Prüfen, ob aktuell KEIN DLC deaktiviert ist (also alle aktiv sind)
+        if (disabledDLCs.length === 0) {
+            // Zustand: Alle waren aktiv -> Jetzt alle DEAKTIVIEREN
+            $('.dlc-dropdown-item').not('[data-dlc="all"]').addClass('dlc-disabled');
+            $clickedItem.removeClass('dlc-active');
+            
+            // Alle DLC-Kürzel in das Array der deaktivierten DLCs packen
+            disabledDLCs = [];
+            $('.dlc-dropdown-item').not('[data-dlc="all"]').each(function() {
+                disabledDLCs.push($(this).data('dlc'));
+            });
+        } else {
+            // Zustand: Es war schon was deaktiviert -> Jetzt wieder ALLE AKTIVIEREN
+            $('.dlc-dropdown-item').removeClass('dlc-disabled');
+            $clickedItem.addClass('dlc-active');
+            disabledDLCs = []; // Array komplett leeren
+        }
+    } else {
+        // "All DLC" verliert den aktiven Status, wenn man ein einzelnes DLC filtert
+        $('.dlc-dropdown-item[data-dlc="all"]').removeClass('dlc-active');
+        
+        // Normaler Toggle für das angeklickte Einzel-DLC
+        $clickedItem.toggleClass('dlc-disabled');
 
-                // Aktualisiere das globale Array der deaktivierten DLCs
-                disabledDLCs = [];
-                $('.dlc-dropdown-item.dlc-disabled').each(function() {
-                    disabledDLCs.push($(this).data('dlc'));
-                });
-
-                // Falls am Ende KEIN DLC mehr ausgegraut ist, schalten wir "All DLC" automatisch an
-                if (disabledDLCs.length === 0) {
-                    $('.dlc-dropdown-item[data-dlc="all"]').addClass('dlc-active');
-                }
+        // Aktualisiere das globale Array der deaktivierten DLCs
+        disabledDLCs = [];
+        $('.dlc-dropdown-item.dlc-disabled').each(function() {
+            var dlcKey = $(this).data('dlc');
+            if (dlcKey !== 'all') {
+                disabledDLCs.push(dlcKey);
             }
-
-            // Jetzt rufen wir die Filterfunktion auf!
-            applyDLCFilterToTree();
         });
+
+        // Falls am Ende KEIN DLC mehr ausgegraut ist, schalten wir "All DLC" automatisch an
+        if (disabledDLCs.length === 0) {
+            $('.dlc-dropdown-item[data-dlc="all"]').addClass('dlc-active');
+        }
+    }
+
+    // Jetzt rufen wir die Filterfunktion auf, um den Baum zu aktualisieren!
+    applyDLCFilterToTree();
+});
 
         // Schließen, wenn man irgendwo anders auf der Seite hinklickt
         $(document).on('click', function(event) {
