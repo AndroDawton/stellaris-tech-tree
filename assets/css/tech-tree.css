@@ -623,3 +623,22 @@ span.tier-5 {
 .counter-orange {
     color: #E29C43 !important; /* Originales Stellaris-Orange */
 }
+/* Das Menü ist standardmäßig unsichtbar */
+.dlc-main-tab .dlc-dropdown-menu {
+    display: none;
+}
+
+/* Sobald die Maus über das DLC-Listenelement fährt, wird es sichtbar */
+.dlc-main-tab:hover .dlc-dropdown-menu {
+    display: block !important;
+}
+
+/* Stellt sicher, dass das Menü ÜBER den Kacheln schwebt */
+.dlc-dropdown-menu {
+    z-index: 99999 !important;
+}
+
+/* Ein kleiner Hover-Effekt für die Einträge im Menü */
+.dlc-dropdown-item:hover {
+    background-color: #333 !important;
+}
