@@ -109,6 +109,33 @@ function init_nodestatus(area) {
     
     // Zähler beim ersten Laden der Seite einmalig berechnen
     updateTierCounters();
+
+    // REINES KLICK-TEST-SKRIPT FÜR DAS MENÜ
+    if (!$('.dlc-main-tab').data('bound-toggle')) {
+        // Klick auf den DLC-Haupttab
+        $('.dlc-main-tab > a').on('click', function(event) {
+            event.preventDefault();
+            event.stopPropagation(); // Verhindert, dass der Klick direkt wieder vom Dokument abgefangen wird
+            
+            var $menu = $('.dlc-dropdown-menu');
+            
+            // Toggle: Wenn sichtbar -> ausblenden, wenn unsichtbar -> einblenden
+            if ($menu.is(':visible')) {
+                $menu.fadeOut(150);
+            } else {
+                $menu.fadeIn(150);
+            }
+        });
+
+        // Schließen, wenn man irgendwo anders auf der Seite hinklickt
+        $(document).on('click', function(event) {
+            if (!$(event.target).closest('.dlc-main-tab').length) {
+                $('.dlc-dropdown-menu').fadeOut(150);
+            }
+        });
+
+        $('.dlc-main-tab').data('bound-toggle', true);
+    }
 } // Hier endet init_nodestatus korrekt
 
 function getNodeDBNode(area, name) {
