@@ -2,7 +2,7 @@
 var charts = {};
 
 function init_nodestatus(area) {
-    var $areaContainer = $('#tech-tree-' + 
+    var $areaContainer = $('#tech-tree-' + area);
 
     // 1. UNSERE NEUEN STEUERUNGSELEMENTE BINDEN
     // Klick auf "o" (Ausgrauen)
@@ -112,7 +112,6 @@ function getNodeDBNode(area, name) {
     for(const item of charts[area].tree.nodeDB.db) {
         if(item.nodeHTMLid === name) return item;
     }
-    // Didn't find in the area charts - maybe it's in another one ?
     for(const tree in charts) {
         if(tree === area) continue;
         for(const item of charts[tree].tree.nodeDB.db) {
