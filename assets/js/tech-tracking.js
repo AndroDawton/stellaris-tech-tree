@@ -369,10 +369,10 @@ function toggleHideChildren(area, nodeHTMLid, shouldHide) {
         $parentEl.removeClass('tech-dimmed');
     }
 
-    for (const child of inode.children) {
-        var child_node = charts[area].tree.nodeDB.db[child];
         var $childEl = $('#' + child_node.nodeHTMLid);
-        var myConnector = child_node.connector;
+        
+        // KORREKTUR: Wir greifen auf das erste Element [0] des Connectors zu!
+        var myConnector = child_node.connector && child_node.connector[0];
 
         if (shouldHide) {
             $childEl.addClass('tech-hidden');
