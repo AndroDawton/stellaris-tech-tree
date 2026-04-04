@@ -532,17 +532,17 @@ span.tier-1 {
 }
 
 span.tier-2 {
-    color: #cccccc;
+    color: #ffff00;
 }
 
 span.tier-3 {
-    color: #00e5ff;
+    color: #990000;
 }
 
 span.tier-4 {
-    color: #b388ff;
+    color: #ff00ea;
 }
 
 span.tier-5 {
-    color: #ea80fc;
+    color: #7700aa;
 }
