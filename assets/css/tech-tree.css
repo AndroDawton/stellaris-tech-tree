@@ -694,7 +694,7 @@ span.tier-5 {
     filter: grayscale(100%);
 }
 
-.float-Element.dlc-main-tab {
+.dlc-tab-only.dlc-main-tab {
     border-radius: 20px !important; /* Macht es zum Oval */
     overflow: visible !important;
     
