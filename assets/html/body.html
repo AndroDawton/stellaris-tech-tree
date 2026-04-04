@@ -25,27 +25,38 @@
       <h2>Events <img src="../assets/icons/event.png" class="float-Image"> </h2>
     </a>
   </li>
-  
+  <li class="float-Element float-Lowlight dlc-main-tab">
+    <a class="float-Contents" style="cursor: pointer;">
+      <h2>DLCs <img src="../assets/icons/event.png" class="float-Image" style="transform: rotate(180deg); width:10px; height:10px; margin-left:5px;"></h2>
+    </a>
+    <div class="dlc-dropdown-menu" style="display: none; position: absolute; top: 100%; left: 0; background: #222; border: 1px solid #5ACA9C; z-index: 9999; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.5);">
+      <div class="dlc-dropdown-item dlc-all-active" data-dlc="all" style="padding: 10px; color: #5ACA9C; font-weight: bold; cursor: pointer; border-bottom: 1px solid #333;">
+         Alle anzeigen
+      </div>
+      <div class="dlc-dropdown-item" data-dlc="Cosmic Storms" style="padding: 10px; color: #fff; cursor: pointer; border-bottom: 1px solid #333;">
+         Cosmic Storms
+      </div>
+      <div class="dlc-dropdown-item" data-dlc="Utopia" style="padding: 10px; color: #fff; cursor: pointer; border-bottom: 1px solid #333;">
+         Utopia
+      </div>
+      <div class="dlc-dropdown-item" data-dlc="Federations" style="padding: 10px; color: #fff; cursor: pointer; border-bottom: 1px solid #333;">
+         Federations
+      </div>
+      <div class="dlc-dropdown-item" data-dlc="Apocalypse" style="padding: 10px; color: #fff; cursor: pointer; border-bottom: 1px solid #333;">
+         Apocalypse
+      </div>
+      <div class="dlc-dropdown-item" data-dlc="The Machine Age" style="padding: 10px; color: #fff; cursor: pointer;">
+         Machine Age
+      </div>
+    </div>
+  </li>
   <li class="float-Element float-Lowlight float-Search">
     <input id="deepsearch" placeholder="Type to search" >
     <span id="counter-physics" class="nav-counter counter-blue">Tier 1 (0/6)</span>
     <span id="counter-society" class="nav-counter counter-green">Tier 1 (0/6)</span>
     <span id="counter-engineering" class="nav-counter counter-orange">Tier 1 (0/6)</span>
   </li>
-  <li class="float-Element float-Lowlight" style="display: flex; align-items: center; height: 100%;">
-      <div style="padding: 0 10px; font-family: 'Arimo', Verdana; font-size: 12px; font-weight: bold; color: #fff;">
-        DLC: 
-        <select id="dlc-selector" style="background: #222; color: #fff; border: 1px solid #5ACA9C; padding: 2px; font-size: 11px;">
-          <option value="all">Show All</option>
-          <option value="Cosmic Storms">Cosmic Storms</option>
-          <option value="Utopia">Utopia</option>
-          <option value="Federations">Federations</option>
-          <option value="Apocalypse">Apocalypse</option>
-          <option value="Overlord">Overlord</option>
-          <option value="The Machine Age">The Machine Age</option>
-        </select>
-      </div>
-    </li>
+
   <li class="float-RightElement float-RightBuffer">
     <a href="../index.html" class="float-RightContents">
       <h2><img src="../assets/icons/back_button.png" class="float-RightImage"> Back</h2>
