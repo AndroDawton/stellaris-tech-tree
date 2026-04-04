@@ -414,22 +414,26 @@ function toggleHideChildren(area, nodeHTMLid, shouldHide) {
 // Funktion 3: NEUER LIVE-TIER-ZÄHLER
 // ==========================================
 function updateTierCounters() {
+    // Wir bereiten Zähler für alle 5 Tiers vor
     let tierCounts = {
         'physics':     { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 },
         'society':     { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 },
         'engineering': { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 }
     };
 
-    // Gehe durch alle aktiven Kacheln
+    // Gehe durch alle aktiven (grünen) Kacheln
     $('.node.active').each(function() {
         let $node = $(this);
-        let tierText = $node.find('.tier').text().trim(); // Holt z.B. "1", "2"
+        
+        // 1. Hole die nackte Zahl aus dem Tier-Feld (z. B. "1", "2")
+        let tierText = $node.find('.tier').text().replace('Tier', '').trim(); 
         let tierNumber = parseInt(tierText);
         
+        // 2. Bestimme den Bereich anhand der CSS-Klassen aus dem Template
         let currentArea = '';
-        if ($node.hasClass('physics')) currentArea = 'physics';
-        else if ($node.hasClass('society')) currentArea = 'society';
-        else if ($node.hasClass('engineering')) currentArea = 'engineering';
+        if ($node.find('.physics-research').length > 0) currentArea = 'physics';
+        else if ($node.find('.society-research').length > 0) currentArea = 'society';
+        else if ($node.find('.engineering-research').length > 0) currentArea = 'engineering';
 
         // Wenn Bereich gefunden und das Tier eine gültige Zahl von 1-5 ist
         if (currentArea !== '' && tierNumber >= 1 && tierNumber <= 5) {
@@ -442,24 +446,24 @@ function updateTierCounters() {
     areas.forEach(area => {
         let currentTier = 1;
         
-        // Stufen-Logik (Prüfen auf jeweils 6 Forschungen)
+        // Stufen-Logik: Prüfen, ob die Hürde von 6 Forschungen genommen wurde
         for (let t = 1; t < 5; t++) {
             if (tierCounts[area][t] >= 6) {
                 currentTier = t + 1;
             } else {
-                break;
+                break; // Sobald eine Stufe unter 6 ist, bleiben wir auf diesem Tier
             }
         }
         
+        // Den Text für die Navigationsleiste zusammenbauen
         let countForDisplay = tierCounts[area][currentTier];
         let label = `Tier ${currentTier} (${countForDisplay}/6)`;
         
-        // Spezialfall für Tier 5
+        // Spezialfall: Wenn man Tier 5 erreicht hat
         if (currentTier === 5) {
             label = `Tier 5 (${countForDisplay})`;
         }
         
         $(`#counter-${area}`).text(label);
     });
-}
 }
