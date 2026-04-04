@@ -131,7 +131,7 @@
     "prerequisites_names": [],
     "weight_modifiers": [],
     "potential": [
-      "Has DLC First Contact Story Pack"
+      "Has DLC First Contact"
     ],
     "children": [],
     "is_event": true,
@@ -237,7 +237,7 @@
     "prerequisites_names": [],
     "weight_modifiers": [],
     "potential": [
-      "Has DLC First Contact Story Pack"
+      "Has DLC First Contact"
     ],
     "children": [],
     "is_event": true,
@@ -395,7 +395,7 @@
       }
     ],
     "weight_modifiers": [],
-    "potential": [],
+    "potential": ["Has DLC Grand Archive"],
     "children": [],
     "is_event": true,
     "source": "vanilla"
@@ -421,7 +421,7 @@
     "prerequisites_names": [],
     "weight_modifiers": [],
     "potential": [
-      "Has DLC First Contact Story Pack"
+      "Has DLC First Contact"
     ],
     "children": [],
     "is_event": true,
@@ -817,7 +817,7 @@
       }
     ],
     "weight_modifiers": [],
-    "potential": [],
+    "potential": ["Has DLC Utopia"],
     "children": [],
     "is_event": true,
     "source": "vanilla"
@@ -849,7 +849,7 @@
       }
     ],
     "weight_modifiers": [],
-    "potential": [],
+    "potential": ["Has DLC Utopia"],
     "children": [],
     "is_event": true,
     "source": "vanilla"
@@ -881,7 +881,7 @@
       }
     ],
     "weight_modifiers": [],
-    "potential": [],
+    "potential": ["Has DLC Utopia"],
     "children": [],
     "is_event": true,
     "source": "vanilla"
@@ -913,7 +913,7 @@
       }
     ],
     "weight_modifiers": [],
-    "potential": [],
+    "potential": ["Has DLC Utopia"],
     "children": [],
     "is_event": true,
     "source": "vanilla"
@@ -945,7 +945,7 @@
       }
     ],
     "weight_modifiers": [],
-    "potential": [],
+    "potential": ["Has DLC Utopia"],
     "children": [],
     "is_event": true,
     "source": "vanilla"
@@ -1057,7 +1057,7 @@
     "tier": 5,
     "prerequisites_names": [],
     "weight_modifiers": [],
-    "potential": [],
+    "potential": ["One must be true\n    •   Has DLC The Machine Age\n    •   Has DLC Aquatics\n    •   Has DLC Leviathans"],
     "children": [],
     "is_event": true,
     "source": "vanilla"
@@ -1115,11 +1115,11 @@
     "is_dangerous": false,
     "is_rare": false,
     "is_start_tech": false,
-    "prerequisites": [],
+    "prerequisites": ["Terraforming Event"],
     "tier": 2,
     "prerequisites_names": [],
     "weight_modifiers": [],
-    "potential": [],
+    "potential": ["Has DLC BioGenesis"],
     "children": [],
     "is_event": true,
     "source": "vanilla"
@@ -1218,11 +1218,11 @@
     "is_dangerous": false,
     "is_rare": true,
     "is_start_tech": false,
-    "prerequisites": [],
+    "prerequisites": ["Defeating the Voidspawn"],
     "tier": 1,
     "prerequisites_names": [],
     "weight_modifiers": [],
-    "potential": [],
+    "potential": ["Has DLC Distant Stars"],
     "children": [],
     "is_event": true,
     "source": "vanilla"
@@ -1471,7 +1471,7 @@
     "prerequisites_names": [],
     "weight_modifiers": [],
     "potential": [
-      "Has DLC First Contact Story Pack"
+      "Has DLC First Contact"
     ],
     "children": [],
     "is_event": true,
@@ -1640,7 +1640,7 @@
     "tier": 5,
     "prerequisites_names": [],
     "weight_modifiers": [],
-    "potential": [],
+    "potential": ["Has DLC The Machine Age\n Has DLC Distant Stars"],
     "children": [],
     "is_event": true,
     "source": "vanilla"
@@ -1687,11 +1687,11 @@
     "is_dangerous": false,
     "is_rare": true,
     "is_start_tech": false,
-    "prerequisites": [],
+    "prerequisites": ["Corrupted Avatar system anomaly"],
     "tier": 4,
     "prerequisites_names": [],
     "weight_modifiers": [],
-    "potential": [],
+    "potential": ["Has DLC Distant Stars"],
     "children": [],
     "is_event": true,
     "source": "vanilla"
@@ -1717,7 +1717,7 @@
     "prerequisites_names": [],
     "weight_modifiers": [],
     "potential": [
-      "Has DLC First Contact Story Pack"
+      "Has DLC First Contact"
     ],
     "children": [],
     "is_event": true,
@@ -1769,7 +1769,7 @@
     "tier": 1,
     "prerequisites_names": [],
     "weight_modifiers": [],
-    "potential": [],
+    "potential": ["Has DLC MegaCorp"],
     "children": [],
     "is_event": true,
     "source": "vanilla"
@@ -1795,7 +1795,7 @@
     "prerequisites_names": [],
     "weight_modifiers": [],
     "potential": [
-      "Has DLC First Contact Story Pack"
+      "Has DLC First Contact"
     ],
     "children": [],
     "is_event": true,
@@ -1821,7 +1821,7 @@
     "prerequisites_names": [],
     "weight_modifiers": [],
     "potential": [
-      "Has DLC First Contact Story Pack"
+      "Has DLC First Contact"
     ],
     "children": [],
     "is_event": true,
@@ -2031,7 +2031,7 @@
       }
     ],
     "weight_modifiers": [],
-    "potential": [],
+    "potential": ["Has DLC Utopia\n Has DLC Shadows of the Shroud"],
     "children": [],
     "is_event": true,
     "source": "vanilla"
@@ -2169,7 +2169,7 @@
     "prerequisites_names": [],
     "weight_modifiers": [],
     "potential": [
-      "Has DLC First Contact Story Pack"
+      "Has DLC First Contact"
     ],
     "children": [],
     "is_event": true,
@@ -2410,7 +2410,7 @@
       }
     ],
     "weight_modifiers": [],
-    "potential": [],
+    "potential": ["Has DLC Grand Archive"],
     "children": [],
     "is_event": true,
     "source": "vanilla"
@@ -2512,7 +2512,7 @@
     "prerequisites_names": [],
     "weight_modifiers": [],
     "potential": [
-      "Has DLC First Contact Story Pack"
+      "Has DLC First Contact"
     ],
     "children": [],
     "is_event": true,
@@ -2564,7 +2564,7 @@
     "prerequisites_names": [],
     "weight_modifiers": [],
     "potential": [
-      "Has DLC First Contact Story Pack"
+      "Has DLC First Contact"
     ],
     "children": [],
     "is_event": true,
@@ -2621,7 +2621,7 @@
     "prerequisites_names": [],
     "weight_modifiers": [],
     "potential": [
-      "Has DLC First Contact Story Pack"
+      "Has DLC First Contact"
     ],
     "children": [],
     "is_event": true,
@@ -2651,7 +2651,7 @@
       }
     ],
     "weight_modifiers": [],
-    "potential": [],
+    "potential": ["Has DLC Grand Archive"],
     "children": [],
     "is_event": true,
     "source": "vanilla"
@@ -2682,7 +2682,7 @@
       }
     ],
     "weight_modifiers": [],
-    "potential": [],
+    "potential": ["Has DLC Grand Archive"],
     "children": [],
     "is_event": true,
     "source": "vanilla"
@@ -2742,7 +2742,7 @@
       }
     ],
     "weight_modifiers": [],
-    "potential": [],
+    "potential": ["Has DLC Grand Archive"],
     "children": [],
     "is_event": true,
     "source": "vanilla"
@@ -2800,7 +2800,7 @@
       }
     ],
     "weight_modifiers": [],
-    "potential": [],
+    "potential": ["Has DLC Grand Archive"],
     "children": [],
     "is_event": true,
     "source": "vanilla"
@@ -2829,7 +2829,7 @@
       }
     ],
     "weight_modifiers": [],
-    "potential": [],
+    "potential": ["Has DLC Grand Archive"],
     "children": [],
     "is_event": true,
     "source": "vanilla"
@@ -2850,11 +2850,11 @@
     "is_dangerous": false,
     "is_rare": true,
     "is_start_tech": false,
-    "prerequisites": [],
+    "prerequisites": ["Ancient Facility archaeological site"],
     "tier": 3,
     "prerequisites_names": [],
     "weight_modifiers": [],
-    "potential": [],
+    "potential": ["Has DLC BioGenesis"],
     "children": [],
     "is_event": true,
     "source": "vanilla"
@@ -2879,7 +2879,7 @@
     "prerequisites_names": [],
     "weight_modifiers": [],
     "potential": [
-      "Has DLC First Contact Story Pack"
+      "Has DLC First Contact"
     ],
     "children": [],
     "is_event": true,
@@ -2901,7 +2901,7 @@
     "is_dangerous": false,
     "is_rare": false,
     "is_start_tech": false,
-    "prerequisites": [],
+    "prerequisites": ["Voidworms first contact choice"],
     "tier": 3,
     "prerequisites_names": [],
     "weight_modifiers": [],
@@ -2933,7 +2933,7 @@
     "prerequisites_names": [],
     "weight_modifiers": [],
     "potential": [
-      "Has DLC First Contact Story Pack"
+      "Has DLC First Contact"
     ],
     "children": [],
     "is_event": true,

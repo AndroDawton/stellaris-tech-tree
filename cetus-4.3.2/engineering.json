@@ -5122,7 +5122,7 @@
                           ],
                           "potential": [
                             "Does NOT have Origin Wilderness",
-                            "One must be true\n    •   One must be true\n\t    •   Has Voidborne Ascension Perk\n\t    •   One must be true\n\t\t    •   Has Origin Void Dwellers\n\t\t    •   Has Origin Voidforged\n    •   Has DLC Utopia"
+                            "One must be true\n    •   One must be true\n\t    •   Has Voidborne Ascension Perk\n\t    •   One must be true\n\t\t    •   Has Origin Void Dwellers\n\t\t    •   Has Origin Voidforged\n    •   Has DLC Utopia\n    •   Has DLC Federations"
                           ],
                           "children": [],
                           "is_event": false,
@@ -6514,6 +6514,7 @@
           "prerequisites_names": [],
           "weight_modifiers": [],
           "potential": [
+            "Has DLC Distant Stars",
             "Encountered an L-Gate",
             "NOT L-Gates opened by this empire",
             "NOT L-Gates opened"
