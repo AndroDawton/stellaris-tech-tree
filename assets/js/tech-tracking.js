@@ -554,31 +554,16 @@ function applyDLCFilterToTree() {
     // Wenn keine DLCs deaktiviert sind (Array ist leer), müssen wir nicht weiter filtern!
     if (disabledDLCs.length === 0) return;
 
-    // 2. Wir gehen jede Technologie-Kachel auf dem Bildschirm durch
-    $('.node.tech').each(function() {
-        var $node = $(this);
-        var isExclusivelyHidden = false;
-
-        // Wir scannen den Textinhalt der Kachel (z.B. Tooltips) nach DLC-Bedingungen
-        $node.find('.tooltip-content').each(function() {
-            var content = $(this).text();
-            
-            // Wenn die Technologie ein DLC erfordert...
-            if (content.includes('Has DLC')) {
-                // ...prüfen wir, ob dieses DLC gerade in unserer "Ausgegraut"-Liste steht
-                disabledDLCs.forEach(function(disabledDlc) {
-                    if (content.includes('Has DLC ' + disabledDlc)) {
-                        isExclusivelyHidden = true;
-                    }
-                });
-            }
-        });
-
-        // 3. Wenn das geforderte DLC deaktiviert wurde, blenden wir die Kachel aus
-        if (isExclusivelyHidden) {
+    // 2. Direkt die Kacheln ansprechen, die die Klasse des deaktivierten DLCs besitzen
+    disabledDLCs.forEach(function(disabledDlc) {
+        // Wir bauen exakt die gleiche Klasse wie im Setup: .dlc-The-Machine-Age
+        var dlcClassName = '.dlc-' + disabledDlc.replace(/\s+/g, '-');
+        
+        $(dlcClassName).each(function() {
+            var $node = $(this);
             $node.addClass('dlc-hidden');
             
-            // Auch die dünnen Verbindungslinien (Konnektoren) im SVG müssen weg
+            // Verbindungslinien (Konnektoren) im SVG ausblenden
             var area = '';
             if ($node.hasClass('physics')) area = 'physics';
             else if ($node.hasClass('society')) area = 'society';
@@ -586,12 +571,11 @@ function applyDLCFilterToTree() {
             
             var id = $node.attr('id');
             if (area !== '' && id) {
-                // Holt das Node-Objekt aus deiner Treant-Datenbank
                 var inode = getNodeDBNode(area, id);
                 if (inode && inode.connector && inode.connector[0]) {
                     $(inode.connector[0]).addClass('dlc-hidden');
                 }
             }
-        }
+        });
     });
 }
