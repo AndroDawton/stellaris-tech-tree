@@ -544,7 +544,7 @@
           "prerequisites_names": [],
           "weight_modifiers": [],
           "potential": [
-            "Country uses biological ships"
+            "Has DLC BioGenesis", "Country uses biological ships"
           ],
           "children": [
             {
@@ -584,7 +584,7 @@
                 "(×<b style='color:lime'>1.25</b>) Has Supremacy Traditions Tradition"
               ],
               "potential": [
-                "Country uses biological ships"
+                "Has DLC BioGenesis", "Country uses biological ships"
               ],
               "children": [
                 {
@@ -624,7 +624,7 @@
                     "(×<b style='color:lime'>1.25</b>) Has Supremacy Traditions Tradition"
                   ],
                   "potential": [
-                    "Country uses biological ships"
+                    "Has DLC BioGenesis", "Country uses biological ships"
                   ],
                   "children": [],
                   "is_event": false,
@@ -668,7 +668,7 @@
               ],
               "weight_modifiers": [],
               "potential": [
-                "Country uses biological ships"
+                "Has DLC BioGenesis", "Country uses biological ships"
               ],
               "children": [],
               "is_event": false,
@@ -696,7 +696,7 @@
           "prerequisites_names": [],
           "weight_modifiers": [],
           "potential": [
-            "Country uses biological ships"
+            "Has DLC BioGenesis", "Country uses biological ships"
           ],
           "children": [
             {
@@ -724,7 +724,7 @@
               ],
               "weight_modifiers": [],
               "potential": [
-                "Country uses biological ships"
+                "Has DLC BioGenesis", "Country uses biological ships"
               ],
               "children": [
                 {
@@ -752,7 +752,7 @@
                   ],
                   "weight_modifiers": [],
                   "potential": [
-                    "Country uses biological ships"
+                    "Has DLC BioGenesis", "Country uses biological ships"
                   ],
                   "children": [
                     {
@@ -782,7 +782,7 @@
                         "(×<b style='color:red'>0.0</b>) All must be false<br/>    •   Has Technology: Rare Crystal Mining<br/>    •   Has Technology: Rare Crystal Manufacturing<br/>    •   Has access to the Galactic Market"
                       ],
                       "potential": [
-                        "Country uses biological ships"
+                        "Has DLC BioGenesis", "Country uses biological ships"
                       ],
                       "children": [
                         {
@@ -812,7 +812,7 @@
                             "(×<b style='color:red'>0.0</b>) All must be false<br/>    •   Has Technology: Rare Crystal Mining<br/>    •   Has Technology: Rare Crystal Manufacturing<br/>    •   Has access to the Galactic Market"
                           ],
                           "potential": [
-                            "Country uses biological ships"
+                            "Has DLC BioGenesis", "Country uses biological ships"
                           ],
                           "children": [
                             {
@@ -842,8 +842,7 @@
                                 "(×<b style='color:red'>0.0</b>) All must be false<br/>    •   Is a Fallen Empire<br/>    •   Is an Awakened Empire"
                               ],
                               "potential": [
-                                "Has DLC BioGenesis",
-                                "Country uses biological ships"
+                                "Has DLC BioGenesis", "Country uses biological ships"
                               ],
                               "children": [],
                               "is_event": false,
@@ -887,6 +886,7 @@
           "prerequisites_names": [],
           "weight_modifiers": [],
           "potential": [
+            "Has DLC BioGenesis",
             "Country uses biological ships"
           ],
           "children": [
@@ -915,7 +915,7 @@
               ],
               "weight_modifiers": [],
               "potential": [
-                "Country uses biological ships"
+                "Has DLC BioGenesis", "Country uses biological ships"
               ],
               "children": [
                 {
@@ -943,7 +943,7 @@
                   ],
                   "weight_modifiers": [],
                   "potential": [
-                    "Country uses biological ships"
+                    "Has DLC BioGenesis", "Country uses biological ships"
                   ],
                   "children": [
                     {
@@ -973,7 +973,7 @@
                         "(×<b style='color:red'>0.0</b>) All must be false<br/>    •   Has Technology: Rare Crystal Mining<br/>    •   Has Technology: Rare Crystal Manufacturing<br/>    •   Has access to the Galactic Market"
                       ],
                       "potential": [
-                        "Country uses biological ships"
+                        "Has DLC BioGenesis", "Country uses biological ships"
                       ],
                       "children": [
                         {
@@ -1003,7 +1003,7 @@
                             "(×<b style='color:red'>0.0</b>) All must be false<br/>    •   Has Technology: Rare Crystal Mining<br/>    •   Has Technology: Rare Crystal Manufacturing<br/>    •   Has access to the Galactic Market"
                           ],
                           "potential": [
-                            "Country uses biological ships"
+                            "Has DLC BioGenesis", "Country uses biological ships"
                           ],
                           "children": [
                             {
@@ -1706,7 +1706,7 @@
             "(×<b style='color:lime'>1.25</b>) Has Supremacy Traditions Tradition"
           ],
           "potential": [
-            "Country uses biological ships"
+            "Has DLC BioGenesis", "Country uses biological ships"
           ],
           "children": [
             {
@@ -1743,7 +1743,7 @@
                 "(×<b style='color:lime'>1.25</b>) Has Supremacy Traditions Tradition"
               ],
               "potential": [
-                "Country uses biological ships"
+                "Has DLC BioGenesis", "Country uses biological ships"
               ],
               "children": [
                 {
@@ -1782,7 +1782,7 @@
                     "(×<b style='color:lime'>1.25</b>) Has Supremacy Traditions Tradition"
                   ],
                   "potential": [
-                    "Country uses biological ships"
+                    "Has DLC BioGenesis", "Country uses biological ships"
                   ],
                   "children": [
                     {
@@ -1822,7 +1822,7 @@
                         "(×<b style='color:lime'>1.25</b>) Has Supremacy Traditions Tradition"
                       ],
                       "potential": [
-                        "Country uses biological ships"
+                        "Has DLC BioGenesis", "Country uses biological ships"
                       ],
                       "children": [],
                       "is_event": false,
@@ -1866,7 +1866,7 @@
                     "(×<b style='color:lime'>1.25</b>) Has Supremacy Traditions Tradition"
                   ],
                   "potential": [
-                    "Country uses biological ships"
+                    "Has DLC BioGenesis", "Country uses biological ships"
                   ],
                   "children": [
                     {
@@ -1903,7 +1903,7 @@
                       ],
                       "weight_modifiers": [],
                       "potential": [
-                        "Country uses biological ships"
+                        "Has DLC BioGenesis", "Country uses biological ships"
                       ],
                       "children": [],
                       "is_event": false,
@@ -1940,7 +1940,7 @@
                       ],
                       "potential": [
                         "One must be true\n    •   Has Technology: Improved Mauler Development\n    •   Has Technology: Improved Stinger Development\n    •   Has Technology: Improved Weaver Development\n    •   Has Technology: Improved Harbinger Development",
-                        "Country uses biological ships"
+                        "Has DLC BioGenesis", "Country uses biological ships"
                       ],
                       "children": [
                         {
@@ -1971,7 +1971,7 @@
                           ],
                           "potential": [
                             "One must be true\n    •   Has Technology: Advanced Mauler Development\n    •   Has Technology: Advanced Stinger Development\n    •   Has Technology: Advanced Weaver Development\n    •   Has Technology: Advanced Harbinger Development",
-                            "Country uses biological ships"
+                            "Has DLC BioGenesis", "Country uses biological ships"
                           ],
                           "children": [],
                           "is_event": false,
@@ -2017,7 +2017,7 @@
                         "(×<b style='color:lime'>1.25</b>) Has Supremacy Traditions Tradition"
                       ],
                       "potential": [
-                        "Country uses biological ships"
+                        "Has DLC BioGenesis", "Country uses biological ships"
                       ],
                       "children": [
                         {
@@ -2057,7 +2057,7 @@
                             "(×<b style='color:lime'>1.25</b>) Has Supremacy Traditions Tradition"
                           ],
                           "potential": [
-                            "Country uses biological ships"
+                            "Has DLC BioGenesis", "Country uses biological ships"
                           ],
                           "children": [],
                           "is_event": false,
@@ -2105,7 +2105,7 @@
                   ],
                   "weight_modifiers": [],
                   "potential": [
-                    "Country uses biological ships"
+                    "Has DLC BioGenesis", "Country uses biological ships"
                   ],
                   "children": [],
                   "is_event": false,
@@ -2140,7 +2140,7 @@
               ],
               "weight_modifiers": [],
               "potential": [
-                "Country uses biological ships"
+                "Has DLC BioGenesis", "Country uses biological ships"
               ],
               "children": [
                 {
@@ -2168,7 +2168,7 @@
                   ],
                   "weight_modifiers": [],
                   "potential": [
-                    "Country uses biological ships"
+                    "Has DLC BioGenesis", "Country uses biological ships"
                   ],
                   "children": [
                     {
@@ -2196,7 +2196,7 @@
                       ],
                       "weight_modifiers": [],
                       "potential": [
-                        "Country uses biological ships"
+                        "Has DLC BioGenesis", "Country uses biological ships"
                       ],
                       "children": [
                         {
@@ -2226,7 +2226,7 @@
                             "(×<b style='color:red'>0.0</b>) All must be false<br/>    •   Has Technology: Mote Stabilization<br/>    •   Has Technology: Volatile Material Plants<br/>    •   Has access to the Galactic Market"
                           ],
                           "potential": [
-                            "Country uses biological ships"
+                            "Has DLC BioGenesis", "Country uses biological ships"
                           ],
                           "children": [
                             {
@@ -2256,7 +2256,7 @@
                                 "(×<b style='color:red'>0.0</b>) All must be false<br/>    •   Has Technology: Mote Stabilization<br/>    •   Has Technology: Volatile Material Plants<br/>    •   Has access to the Galactic Market"
                               ],
                               "potential": [
-                                "Country uses biological ships"
+                                "Has DLC BioGenesis", "Country uses biological ships"
                               ],
                               "children": [
                                 {
@@ -2338,7 +2338,7 @@
               ],
               "weight_modifiers": [],
               "potential": [
-                "Country uses biological ships"
+                "Has DLC BioGenesis", "Country uses biological ships"
               ],
               "children": [
                 {
@@ -2366,7 +2366,7 @@
                   ],
                   "weight_modifiers": [],
                   "potential": [
-                    "Country uses biological ships"
+                    "Has DLC BioGenesis", "Country uses biological ships"
                   ],
                   "children": [
                     {
@@ -2394,7 +2394,7 @@
                       ],
                       "weight_modifiers": [],
                       "potential": [
-                        "Country uses biological ships"
+                        "Has DLC BioGenesis", "Country uses biological ships"
                       ],
                       "children": [
                         {
@@ -2424,7 +2424,7 @@
                             "(×<b style='color:red'>0.0</b>) All must be false<br/>    •   Has Technology: Mote Stabilization<br/>    •   Has Technology: Volatile Material Plants<br/>    •   Has access to the Galactic Market"
                           ],
                           "potential": [
-                            "Country uses biological ships"
+                            "Has DLC BioGenesis", "Country uses biological ships"
                           ],
                           "children": [
                             {
@@ -2454,7 +2454,7 @@
                                 "(×<b style='color:red'>0.0</b>) All must be false<br/>    •   Has Technology: Mote Stabilization<br/>    •   Has Technology: Volatile Material Plants<br/>    •   Has access to the Galactic Market"
                               ],
                               "potential": [
-                                "Country uses biological ships"
+                                "Has DLC BioGenesis", "Country uses biological ships"
                               ],
                               "children": [
                                 {
@@ -2536,7 +2536,7 @@
               ],
               "weight_modifiers": [],
               "potential": [
-                "Country uses biological ships"
+                "Has DLC BioGenesis", "Country uses biological ships"
               ],
               "children": [
                 {
@@ -2564,7 +2564,7 @@
                   ],
                   "weight_modifiers": [],
                   "potential": [
-                    "Country uses biological ships"
+                    "Has DLC BioGenesis", "Country uses biological ships"
                   ],
                   "children": [
                     {
@@ -2592,7 +2592,7 @@
                       ],
                       "weight_modifiers": [],
                       "potential": [
-                        "Country uses biological ships"
+                        "Has DLC BioGenesis", "Country uses biological ships"
                       ],
                       "children": [
                         {
@@ -2622,7 +2622,7 @@
                             "(×<b style='color:red'>0.0</b>) All must be false<br/>    •   Has Technology: Exotic Gas Extraction<br/>    •   Has Technology: Exotic Gas Refining<br/>    •   Has access to the Galactic Market"
                           ],
                           "potential": [
-                            "Country uses biological ships"
+                            "Has DLC BioGenesis", "Country uses biological ships"
                           ],
                           "children": [
                             {
@@ -2652,7 +2652,7 @@
                                 "(×<b style='color:red'>0.0</b>) All must be false<br/>    •   Has Technology: Exotic Gas Extraction<br/>    •   Has Technology: Exotic Gas Refining<br/>    •   Has access to the Galactic Market"
                               ],
                               "potential": [
-                                "Country uses biological ships"
+                                "Has DLC BioGenesis", "Country uses biological ships"
                               ],
                               "children": [
                                 {
@@ -2734,7 +2734,7 @@
               ],
               "weight_modifiers": [],
               "potential": [
-                "Country uses biological ships"
+                "Has DLC BioGenesis", "Country uses biological ships"
               ],
               "children": [
                 {
@@ -2762,7 +2762,7 @@
                   ],
                   "weight_modifiers": [],
                   "potential": [
-                    "Country uses biological ships"
+                    "Has DLC BioGenesis", "Country uses biological ships"
                   ],
                   "children": [
                     {
@@ -2790,7 +2790,7 @@
                       ],
                       "weight_modifiers": [],
                       "potential": [
-                        "Country uses biological ships"
+                        "Has DLC BioGenesis", "Country uses biological ships"
                       ],
                       "children": [
                         {
@@ -2820,7 +2820,7 @@
                             "(×<b style='color:red'>0.0</b>) All must be false<br/>    •   Has Technology: Mote Stabilization<br/>    •   Has Technology: Volatile Material Plants<br/>    •   Has access to the Galactic Market"
                           ],
                           "potential": [
-                            "Country uses biological ships"
+                            "Has DLC BioGenesis", "Country uses biological ships"
                           ],
                           "children": [
                             {
@@ -2850,7 +2850,7 @@
                                 "(×<b style='color:red'>0.0</b>) All must be false<br/>    •   Has Technology: Mote Stabilization<br/>    •   Has Technology: Volatile Material Plants<br/>    •   Has access to the Galactic Market"
                               ],
                               "potential": [
-                                "Country uses biological ships"
+                                "Has DLC BioGenesis", "Country uses biological ships"
                               ],
                               "children": [
                                 {
@@ -2941,7 +2941,7 @@
               ],
               "weight_modifiers": [],
               "potential": [
-                "Country uses biological ships"
+                "Has DLC BioGenesis", "Country uses biological ships"
               ],
               "children": [],
               "is_event": false,
@@ -2984,7 +2984,7 @@
                 "(×<b style='color:lime'>1.25</b>) Has Supremacy Traditions Tradition"
               ],
               "potential": [
-                "Country uses biological ships"
+                "Has DLC BioGenesis", "Country uses biological ships"
               ],
               "children": [
                 {
@@ -3024,7 +3024,7 @@
                     "(×<b style='color:lime'>1.25</b>) Has Supremacy Traditions Tradition"
                   ],
                   "potential": [
-                    "Country uses biological ships"
+                    "Has DLC BioGenesis", "Country uses biological ships"
                   ],
                   "children": [],
                   "is_event": false,
