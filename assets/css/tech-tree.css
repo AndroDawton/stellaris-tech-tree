@@ -711,3 +711,19 @@ span.tier-5 {
     /* 3. INNENABSTÄNDE ENTFERNEN */
     padding: 0 !important;          /* Verhindert, dass alte Abstände das Oval verzerren */
 }
+/* Hover-Effekt für alle normalen Menü-Buttons */
+.float-Element:hover {
+    background-color: #555555 !important; /* Macht den Hintergrund beim Drüberfahren heller */
+    /* cursor: pointer; Zeigt die Klick-Hand als Mauszeiger */
+}
+
+/* Hover-Effekt für die Buttons ganz rechts außen */
+.float-RightElement:hover {
+    background-color: #2F6458 !important; /* Ein schickes Stellaris-Grün für die rechten Buttons */
+    /* cursor: pointer;*/
+}
+
+/* Weicher Übergang (Optional, sieht aber extrem edel aus!) */
+.float-Element, .float-RightElement {
+    transition: background-color 0.2s ease;
+}
