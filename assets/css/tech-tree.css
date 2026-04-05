@@ -146,7 +146,7 @@ body {
     width: 21px;
 }
 
-/* HIER IST DIE NEUE ERGÄNZUNG: Korrektur nur für den Anomalie-Tab */
+/* Korrektur nur für den Anomalie-Tab */
 #tech-tree-anomalies .tech div.node-status {
     position: absolute;
     bottom: 4px;
@@ -399,8 +399,8 @@ div.fixed div {
     float: left;
     padding-top: 5px;
     padding-bottom: 10px;
-    padding-left: 20px;
-    padding-right:20px;
+    padding-left: 10px;
+    padding-right:10px;
     border-radius: 15px 15px 0px 0px;
     margin-top: 10px;
     
