@@ -573,16 +573,18 @@ span.tier-5 {
 .tech-controls {
     position: absolute;
     top: 2px;
+    left: 5px;
     right: 5px;
     font-family: monospace;
     font-size: 14px;
     font-weight: bold;
     line-height: 1;
+    display: flex;
+    justify-content: space-between;
 }
 
 .btn-dim-tree, .btn-hide-tree {
     cursor: pointer;
-    margin-left: 6px;
     padding: 0 3px;
     color: #888;
     transition: color 0.2s;
