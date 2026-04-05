@@ -735,3 +735,21 @@ span.tier-5 {
 .float-Element, .float-RightElement {
     transition: background-color 0.2s ease;
 }
+
+
+/* ==========================================
+   DLC FILTER-EFFEKTE (NEU)
+   ========================================== */
+
+/* Macht die Kacheln fast unsichtbar und unklickbar */
+.node.tech.dlc-hidden {
+    opacity: 0.15 !important;
+    pointer-events: none;      /* Verhindert, dass man die Tech noch anklicken kann */
+    transition: opacity 0.2s ease; /* Macht das Ausblenden geschmeidig */
+}
+
+/* Blendet auch die SVG-Verbindungslinien der gefilterten Kacheln aus */
+path.dlc-hidden {
+    opacity: 0.15 !important;
+    transition: opacity 0.2s ease;
+}
