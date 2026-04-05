@@ -76,7 +76,22 @@ function setup(tech) {
     var html = tmpl.render(tech);
 
     tech.HTMLid = tech.key;
-    tech.HTMLclass = tech.area + techClass + (tech.is_start_tech ? ' active' : '');
+    
+    // NEU: Wir holen die DLCs direkt aus dem "potential"-Array der JSON
+    var dlcClasses = '';
+    if (tech.potential && tech.potential.length > 0) {
+        tech.potential.forEach(function(condition) {
+            if (condition.startsWith('Has DLC ')) {
+                // Holt den Namen nach "Has DLC " (z.B. "The Machine Age")
+                var dlcName = condition.replace('Has DLC ', '').trim();
+                // Macht daraus " dlc-The-Machine-Age" für die CSS-Klasse
+                dlcClasses += ' dlc-' + dlcName.replace(/\s+/g, '-');
+            }
+        });
+    }
+
+    // SICHER: Wir hängen dlcClasses einfach nur hinten an die bestehenden Klassen an!
+    tech.HTMLclass = tech.area + techClass + (tech.is_start_tech ? ' active' : '') + dlcClasses;
 
     var output = html;
     if(tech.is_start_tech) {
@@ -90,7 +105,7 @@ function setup(tech) {
     $(tech.children).each(function(i, node) {
         setup(node);
     });
-};
+}
 
 function setup_search() {
     const trees = document.querySelector('#tech-tree').querySelectorAll("[id|='tech-tree']");
