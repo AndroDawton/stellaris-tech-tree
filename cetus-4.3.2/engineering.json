@@ -698,7 +698,9 @@
                       ],
                       "weight_modifiers": [],
                       "potential": [
-                        "One must be true\n    •   Has DLC The Machine Age\n    •   Has DLC Synthetic Dawn\n    •   Has Machine Intelligence Authority\n    •   All must be true\n\t    •   Founder Species:\n\t\t    •   Is archetype Machine\n\t    •   Does NOT have Gestalt Consciousness Ethic"
+                        "Has DLC The Machine Age",
+                        "Has DLC Synthetic Dawn",
+                        "One must be true\n    •   Has Machine Intelligence Authority\n    •   All must be true\n\t    •   Founder Species:\n\t\t    •   Is archetype Machine\n\t    •   Does NOT have Gestalt Consciousness Ethic"
                       ],
                       "children": [
                         {
@@ -736,7 +738,9 @@
                             "(×<b style='color:red'>0.2</b>) All must be false<br/>    •   Any Leader in council has trait Maniacal 1<br/>    •   Any Leader in council has trait Maniacal 2<br/>    •   Any Leader in council has trait Maniacal 3<br/>    •   Any Leader in council has trait Spark of Genius 1<br/>    •   Any Leader in council has trait Spark of Genius 2<br/>    •   Any Leader in council has trait Curator 1<br/>    •   Any Leader in council has trait Expertise: Industry 1"
                           ],
                           "potential": [
-                            "One must be true\n    •   Has DLC The Machine Age\n    •   Has DLC Synthetic Dawn\n    •   Has Machine Intelligence Authority\n    •   All must be true\n\t    •   Founder Species:\n\t\t    •   Is archetype Machine\n\t    •   Does NOT have Gestalt Consciousness Ethic"
+                            "Has DLC The Machine Age",
+                            "Has DLC Synthetic Dawn",
+                            "One must be true\n    •   Has Machine Intelligence Authority\n    •   All must be true\n\t    •   Founder Species:\n\t\t    •   Is archetype Machine\n\t    •   Does NOT have Gestalt Consciousness Ethic"
                           ],
                           "children": [],
                           "is_event": false,
@@ -777,7 +781,9 @@
                             "(×<b style='color:red'>0.2</b>) All must be false<br/>    •   Any Leader in council has trait Maniacal 1<br/>    •   Any Leader in council has trait Maniacal 2<br/>    •   Any Leader in council has trait Maniacal 3<br/>    •   Any Leader in council has trait Spark of Genius 1<br/>    •   Any Leader in council has trait Spark of Genius 2<br/>    •   Any Leader in council has trait Curator 1<br/>    •   Any Leader in council has trait Expertise: Industry 1"
                           ],
                           "potential": [
-                            "One must be true\n    •   Has DLC The Machine Age\n    •   Has DLC Synthetic Dawn\n    •   Has Machine Intelligence Authority\n    •   All must be true\n\t    •   Founder Species:\n\t\t    •   Is archetype Machine\n\t    •   Does NOT have Gestalt Consciousness Ethic"
+                            "Has DLC The Machine Age",
+                            "Has DLC Synthetic Dawn",
+                            "One must be true\n    •   Has Machine Intelligence Authority\n    •   All must be true\n\t    •   Founder Species:\n\t\t    •   Is archetype Machine\n\t    •   Does NOT have Gestalt Consciousness Ethic"
                           ],
                           "children": [],
                           "is_event": false,
@@ -1888,7 +1894,9 @@
           "prerequisites_names": [],
           "weight_modifiers": [],
           "potential": [
-            "One must be true\n    •   Has DLC The Machine Age\n    •   Has DLC Synthetic Dawn\n    •   Has Machine Intelligence Authority\n    •   All must be true\n\t    •   Founder Species:\n\t\t    •   Is archetype Machine\n\t    •   Does NOT have Gestalt Consciousness Ethic"
+            "Has DLC The Machine Age",
+            "Has DLC Synthetic Dawn",
+            "One must be true\n    •   Has Machine Intelligence Authority\n    •   All must be true\n\t    •   Founder Species:\n\t\t    •   Is archetype Machine\n\t    •   Does NOT have Gestalt Consciousness Ethic"
           ],
           "children": [
             {
@@ -2123,7 +2131,7 @@
             "(×<b style='color:lime'>1.5</b>) Has Enigmatic Engineering Ascension Perk",
             "(×<b style='color:lime'>2.0</b>) Any Owned Planet<br/>    •   Is Synaptic Lathe<br/>    •   Pop count is greater than 5000"
           ],
-          "potential": ["    •   Has DLC The Machine Age"],
+          "potential": ["Has DLC The Machine Age"],
           "children": [
             {
               "key": "tech_fe_assembly_2",
@@ -2154,7 +2162,7 @@
                 "(×<b style='color:red'>0.0</b>) Has policy Robotic Workers Outlawed",
                 "(×<b style='color:red'>0.0</b>) Does NOT have Cosmogenesis Ascension Perk"
               ],
-              "potential": ["    •   Has DLC The Machine Age"],
+              "potential": ["Has DLC The Machine Age"],
               "children": [],
               "is_event": false,
               "source": "vanilla"
@@ -2188,7 +2196,7 @@
             "(×<b style='color:lime'>1.5</b>) Has Enigmatic Engineering Ascension Perk",
             "(×<b style='color:lime'>2.0</b>) Any Owned Planet<br/>    •   Is Synaptic Lathe<br/>    •   Pop count is greater than 5000"
           ],
-          "potential": ["    •   Has DLC The Machine Age"],
+          "potential": ["Has DLC The Machine Age"],
           "children": [
             {
               "key": "tech_fe_affluence_2",
@@ -2219,7 +2227,7 @@
                 "(×<b style='color:red'>0.0</b>) Does NOT have Cosmogenesis Ascension Perk",
                 "(×<b style='color:red'>0.0</b>) Country does NOT use Consumer Goods"
               ],
-              "potential": ["    •   Has DLC The Machine Age"],
+              "potential": ["Has DLC The Machine Age"],
               "children": [],
               "is_event": false,
               "source": "vanilla"
@@ -2775,7 +2783,8 @@
             "(×<b style='color:lime'>1.5</b>) Has Fanatic Militarist Ethic"
           ],
           "potential": [
-            "Has to be ture\n Country uses biological ships\n Has DLC BioGenesis"
+            "Has DLC BioGenesis",
+            "Has to be ture\n Country uses biological ships"
           ],
           "children": [
             {
@@ -2808,7 +2817,8 @@
                 "(×<b style='color:lime'>1.5</b>) Has Fanatic Militarist Ethic"
               ],
               "potential": [
-                "Has to be ture\n Country uses biological ships\n Has DLC BioGenesis"
+                "Has DLC BioGenesis",
+                "Has to be ture\n Country uses biological ships"
               ],
               "children": [],
               "is_event": false,
@@ -2843,7 +2853,7 @@
             "(×<b style='color:lime'>1.5</b>) Has Enigmatic Engineering Ascension Perk",
             "(×<b style='color:lime'>2.0</b>) Any Owned Planet<br/>    •   Is Synaptic Lathe<br/>    •   Pop count is greater than 5000"
           ],
-          "potential": ["    •   Has DLC The Machine Age"],
+          "potential": ["Has DLC The Machine Age"],
           "children": [
             {
               "key": "tech_fe_mine_2",
@@ -2873,7 +2883,7 @@
               "weight_modifiers": [
                 "(×<b style='color:red'>0.0</b>) Does NOT have Cosmogenesis Ascension Perk"
               ],
-              "potential": ["    •   Has DLC The Machine Age"],
+              "potential": ["Has DLC The Machine Age"],
               "children": [],
               "is_event": false,
               "source": "vanilla"
@@ -2907,7 +2917,7 @@
             "(×<b style='color:lime'>1.5</b>) Has Enigmatic Engineering Ascension Perk",
             "(×<b style='color:lime'>2.0</b>) Any Owned Planet<br/>    •   Is Synaptic Lathe<br/>    •   Pop count is greater than 5000"
           ],
-          "potential": ["    •   Has DLC The Machine Age"],
+          "potential": ["Has DLC The Machine Age"],
           "children": [
             {
               "key": "tech_fe_fabricator_2",
@@ -5041,8 +5051,12 @@
                     "(×<b style='color:lime'>1.25</b>) Has Expansion Traditions Finished Tradition"
                   ],
                   "potential": [
+                    "Has DLC Utopia",
+                    "Has DLC Federations",
+                    "Has DLC Toxoids",
+                    "Has DLC First Contact",
                     "Does NOT have Origin Wilderness",
-                    "One must be true\n    •   One must be true\n\t    •   Has Origin Void Dwellers\n\t    •   Has Origin Voidforged\n    •   Has Origin Knights of the Toxic God\n    •   Has DLC Utopia\n    •   Has DLC Federations\n    •   Has DLC Toxoids\n    •   Has DLC First Contact"
+                    "One must be true\n    •   One must be true\n\t    •   Has Origin Void Dwellers\n\t    •   Has Origin Voidforged\n    •   Has Origin Knights of the Toxic God"
                   ],
                   "children": [
                     {
@@ -5081,8 +5095,10 @@
                         "(×<b style='color:lime'>10.0</b>) One must be true<br/>    •   Has Voidborne Ascension Perk<br/>    •   One must be true<br/>\t    •   Has Origin Void Dwellers<br/>\t    •   Has Origin Voidforged"
                       ],
                       "potential": [
+                        "Has DLC Utopia",
+                        "Has DLC Federations",
                         "Does NOT have Origin Wilderness",
-                        "One must be true\n    •   One must be true\n\t    •   Has Origin Void Dwellers\n\t    •   Has Origin Voidforged\n    •   Has DLC Utopia\n    •   Has DLC Federations"
+                        "One must be true\n    •   One must be true\n\t    •   Has Origin Void Dwellers\n\t    •   Has Origin Voidforged"
                       ],
                       "children": [
                         {
@@ -5121,8 +5137,10 @@
                             "(×<b style='color:lime'>10.0</b>) One must be true<br/>    •   Has Voidborne Ascension Perk<br/>    •   One must be true<br/>\t    •   Has Origin Void Dwellers<br/>\t    •   Has Origin Voidforged"
                           ],
                           "potential": [
+                            "Has DLC Utopia",
+                            "Has DLC Federations",
                             "Does NOT have Origin Wilderness",
-                            "One must be true\n    •   One must be true\n\t    •   Has Voidborne Ascension Perk\n\t    •   One must be true\n\t\t    •   Has Origin Void Dwellers\n\t\t    •   Has Origin Voidforged\n    •   Has DLC Utopia\n    •   Has DLC Federations"
+                            "One must be true\n    •   One must be true\n\t    •   Has Voidborne Ascension Perk\n\t    •   One must be true\n\t\t    •   Has Origin Void Dwellers\n\t\t    •   Has Origin Voidforged"
                           ],
                           "children": [],
                           "is_event": false,
@@ -6032,8 +6050,10 @@
                   ],
                   "potential": [
                     "Has DLC Apocalypse",
+                    "Has DLC Utopia",
+                    "Has DLC Shadows of the Shroud",
                     "Has Colossus Project Ascension Perk",
-                    "One must be true\n    •   All must be false\n\t    •   Has Spiritualist Ethic\n\t    •   Has Fanatic Spiritualist Ethic\n    •   All must be false\n\t    •   All must be true\n\t\t    •   Does NOT have DLC Utopia\n\t\t    •   Has Technology: Telepathy\n\t    •   All must be true\n\t\t    •   One must be true\n\t\t\t    •   Has DLC Utopia\n\t\t\t    •   Has DLC Shadows of the Shroud\n\t\t    •   One must be true\n\t\t\t    •   Has Mind Over Matter Ascension Perk\n\t\t\t    •   Has Origin Teachers of the Shroud\n\t\t\t    •   Has Origin Endbringers\n\t\t\t    •   One must be true\n\t\t\t\t    •   Has Government Civic: Chosen\n\t\t\t\t    •   Has Government Civic: Chosen Many\n\t\t\t\t    •   Has Government Civic: Apostle Network\n\t\t\t\t    •   Has Government Civic: Chosen Executives\n\t\t\t    •   All must be true\n\t\t\t\t    •   Has Origin Shroud-Forged\n\t\t\t\t    •   Finished the Forged by the Shroud situation by supporting the Shroud",
+                    "One must be true\n    •   All must be false\n\t    •   Has Spiritualist Ethic\n\t    •   Has Fanatic Spiritualist Ethic\n    •   All must be false\n\t    •   All must be true\n\t\t    •   Does NOT have DLC Utopia\n\t\t    •   Has Technology: Telepathy\n\t    •   All must be true\n\t\t    •   One must be true\n\t\t\t    •   One must be true\n\t\t\t    •   Has Mind Over Matter Ascension Perk\n\t\t\t    •   Has Origin Teachers of the Shroud\n\t\t\t    •   Has Origin Endbringers\n\t\t\t    •   One must be true\n\t\t\t\t    •   Has Government Civic: Chosen\n\t\t\t\t    •   Has Government Civic: Chosen Many\n\t\t\t\t    •   Has Government Civic: Apostle Network\n\t\t\t\t    •   Has Government Civic: Chosen Executives\n\t\t\t    •   All must be true\n\t\t\t\t    •   Has Origin Shroud-Forged\n\t\t\t\t    •   Finished the Forged by the Shroud situation by supporting the Shroud",
                     "All must be false\n    •   Has Pacifist Ethic\n    •   Has Fanatic Pacifist Ethic"
                   ],
                   "children": [],
@@ -6106,10 +6126,13 @@
                     "(×<b style='color:red'>0.2</b>) All must be false<br/>    •   Any Leader in council has trait Maniacal 1<br/>    •   Any Leader in council has trait Maniacal 2<br/>    •   Any Leader in council has trait Maniacal 3<br/>    •   Any Leader in council has trait Curator 1<br/>    •   Any Leader in council has trait Expertise: Psionics 1"
                   ],
                   "potential": [
+                    "One must be true",
+                    "Has DLC Utopia",
+                    "Has DLC Shadows of the Shroud",
                     "Has DLC Apocalypse",
                     "Has Colossus Project Ascension Perk",
                     "One must be true\n    •   Has Spiritualist Ethic\n    •   Has Fanatic Spiritualist Ethic",
-                    "One must be true\n    •   All must be true\n\t    •   Does NOT have DLC Utopia\n\t    •   Has Technology: Telepathy\n    •   All must be true\n\t    •   One must be true\n\t\t    •   Has DLC Utopia\n\t\t    •   Has DLC Shadows of the Shroud\n\t    •   One must be true\n\t\t    •   Has Mind Over Matter Ascension Perk\n\t\t    •   Has Origin Teachers of the Shroud\n\t\t    •   Has Origin Endbringers\n\t\t    •   One must be true\n\t\t\t    •   Has Government Civic: Chosen\n\t\t\t    •   Has Government Civic: Chosen Many\n\t\t\t    •   Has Government Civic: Apostle Network\n\t\t\t    •   Has Government Civic: Chosen Executives\n\t\t    •   All must be true\n\t\t\t    •   Has Origin Shroud-Forged\n\t\t\t    •   Finished the Forged by the Shroud situation by supporting the Shroud"
+                    "One must be true\n    •   All must be true\n\t    •   Does NOT have DLC Utopia\n\t    •   Has Technology: Telepathy\n    •   All must be true\n\t    •   One must be true\n\t\t    •   Has Mind Over Matter Ascension Perk\n\t\t    •   Has Origin Teachers of the Shroud\n\t\t    •   Has Origin Endbringers\n\t\t    •   One must be true\n\t\t\t    •   Has Government Civic: Chosen\n\t\t\t    •   Has Government Civic: Chosen Many\n\t\t\t    •   Has Government Civic: Apostle Network\n\t\t\t    •   Has Government Civic: Chosen Executives\n\t\t    •   All must be true\n\t\t\t    •   Has Origin Shroud-Forged\n\t\t\t    •   Finished the Forged by the Shroud situation by supporting the Shroud"
                   ],
                   "children": [],
                   "is_event": false,

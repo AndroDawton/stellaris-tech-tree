@@ -842,7 +842,8 @@
                                 "(×<b style='color:red'>0.0</b>) All must be false<br/>    •   Is a Fallen Empire<br/>    •   Is an Awakened Empire"
                               ],
                               "potential": [
-                                "Has DLC BioGenesis\n Country uses biological ships"
+                                "Has DLC BioGenesis",
+                                "Country uses biological ships"
                               ],
                               "children": [],
                               "is_event": false,
@@ -1032,7 +1033,8 @@
                                 "(×<b style='color:red'>0.0</b>) All must be false<br/>    •   Is a Fallen Empire<br/>    •   Is an Awakened Empire"
                               ],
                               "potential": [
-                                "Has DLC BioGenesis\n Country uses biological ships"
+                                "Has DLC BioGenesis",
+                                "Country uses biological ships"
                               ],
                               "children": [],
                               "is_event": false,
@@ -2284,7 +2286,8 @@
                                     "(×<b style='color:red'>0.0</b>) All must be false<br/>    •   Is a Fallen Empire<br/>    •   Is an Awakened Empire"
                                   ],
                                   "potential": [
-                                    "Has DLC BioGenesis\n Country uses biological ships"
+                                    "Has DLC BioGenesis",
+                                    "Country uses biological ships"
                                   ],
                                   "children": [],
                                   "is_event": false,
@@ -2481,7 +2484,8 @@
                                     "(×<b style='color:red'>0.0</b>) All must be false<br/>    •   Is a Fallen Empire<br/>    •   Is an Awakened Empire"
                                   ],
                                   "potential": [
-                                    "Has DLC BioGenesis\n Country uses biological ships"
+                                    "Has DLC BioGenesis",
+                                    "Country uses biological ships"
                                   ],
                                   "children": [],
                                   "is_event": false,
@@ -2678,7 +2682,8 @@
                                     "(×<b style='color:red'>0.0</b>) All must be false<br/>    •   Is a Fallen Empire<br/>    •   Is an Awakened Empire"
                                   ],
                                   "potential": [
-                                    "Has DLC BioGenesis\n Country uses biological ships"
+                                    "Has DLC BioGenesis",
+                                    "Country uses biological ships"
                                   ],
                                   "children": [],
                                   "is_event": false,
@@ -2875,7 +2880,8 @@
                                     "(×<b style='color:red'>0.0</b>) All must be false<br/>    •   Is a Fallen Empire<br/>    •   Is an Awakened Empire"
                                   ],
                                   "potential": [
-                                    "Has DLC BioGenesis\n Country uses biological ships"
+                                    "Has DLC BioGenesis",
+                                    "Country uses biological ships"
                                   ],
                                   "children": [],
                                   "is_event": false,
@@ -3176,7 +3182,10 @@
             "(×<b style='color:lime'>1.5</b>) Has Enigmatic Engineering Ascension Perk",
             "(×<b style='color:lime'>2.0</b>) Any Owned Planet<br/>    •   Is Synaptic Lathe<br/>    •   Pop count is greater than 5000"
           ],
-          "potential": ["Has DLC The Machine Age\n Has DLC Apocalypse"],
+          "potential": [
+              "Has DLC The Machine Age",
+              "Has DLC Apocalypse"
+              ],
           "children": [
             {
               "key": "tech_fe_clinic_2",
@@ -3206,7 +3215,10 @@
               "weight_modifiers": [
                 "(×<b style='color:red'>0.0</b>) Does NOT have Cosmogenesis Ascension Perk"
               ],
-              "potential": ["Has DLC The Machine Age\n Has DLC Apocalypse"],
+              "potential": [
+                  "Has DLC The Machine Age",
+                  "Has DLC Apocalypse"
+                  ],
               "children": [],
               "is_event": false,
               "source": "vanilla"
@@ -3241,7 +3253,10 @@
             "(×<b style='color:lime'>2.0</b>) Any Owned Planet<br/>    •   Is Synaptic Lathe<br/>    •   Pop count is greater than 5000",
             "(×<b style='color:lime'>2.0</b>) Country uses biological ships"
           ],
-          "potential": ["Has DLC The Machine Age\n Has DLC Apocalypse"],
+          "potential": [
+              "Has DLC The Machine Age",
+              "Has DLC Apocalypse"
+              ],
           "children": [
             {
               "key": "tech_fe_nourishment_2",
@@ -3273,7 +3288,10 @@
                 "(×<b style='color:red'>0.0</b>) Country does NOT use Food",
                 "(×<b style='color:lime'>2.0</b>) Country uses biological ships"
               ],
-              "potential": ["Has DLC The Machine Age\n Has DLC Apocalypse"],
+              "potential": [
+                  "Has DLC The Machine Age",
+                  "Has DLC Apocalypse"
+                  ],
               "children": [],
               "is_event": false,
               "source": "vanilla"
@@ -3755,7 +3773,9 @@
           "prerequisites_names": [],
           "weight_modifiers": [],
           "potential": [
-            "One must be true\n    •   Has DLC The Machine Age\n    •   Has DLC Synthetic Dawn\n    •   Has Machine Intelligence Authority\n    •   All must be true\n\t    •   Founder Species:\n\t\t    •   Is archetype Machine\n\t    •   Does NOT have Gestalt Consciousness Ethic"
+            "Has DLC The Machine Age",
+            "Has DLC Synthetic Dawn",
+            "One must be true\n    •   Has Machine Intelligence Authority\n    •   All must be true\n\t    •   Founder Species:\n\t\t    •   Is archetype Machine\n\t    •   Does NOT have Gestalt Consciousness Ethic"
           ],
           "children": [
             {
@@ -3788,7 +3808,9 @@
                 "(×<b style='color:red'>0.1</b>) All must be false<br/>    •   Any Leader in council has trait Expertise: Biology 1<br/>    •   Any Leader in council has trait Curator 1"
               ],
               "potential": [
-                "One must be true\n Has DLC The Machine Age\n Has DLC Synthetic Dawn\n    •   Has Machine Intelligence Authority\n    •   All must be true\n\t    •   Founder Species:\n\t\t    •   Is archetype Machine\n\t    •   Does NOT have Gestalt Consciousness Ethic"
+                "Has DLC The Machine Age",
+                "Has DLC Synthetic Dawn",
+                "One must be true\n    •   Has Machine Intelligence Authority\n    •   All must be true\n\t    •   Founder Species:\n\t\t    •   Is archetype Machine\n\t    •   Does NOT have Gestalt Consciousness Ethic"
               ],
               "children": [],
               "is_event": false,
@@ -4048,7 +4070,10 @@
             "(×<b style='color:lime'>1.5</b>) Has Enigmatic Engineering Ascension Perk",
             "(×<b style='color:lime'>2.0</b>) Any Owned Planet<br/>    •   Is Synaptic Lathe<br/>    •   Pop count is greater than 5000"
           ],
-          "potential": ["Has DLC The Machine Age\n Has DLC Apocalypse"],
+          "potential": [
+              "Has DLC The Machine Age",
+              "Has DLC Apocalypse"
+              ],
           "children": [
             {
               "key": "tech_fe_fortress_2",
@@ -4078,7 +4103,10 @@
               "weight_modifiers": [
                 "(×<b style='color:red'>0.0</b>) Does NOT have Cosmogenesis Ascension Perk"
               ],
-              "potential": ["Has DLC The Machine Age\n Has DLC Apocalypse"],
+              "potential": [
+                  "Has DLC The Machine Age",
+                  "Has DLC Apocalypse"
+                  ],
               "children": [],
               "is_event": false,
               "source": "vanilla"
@@ -4541,7 +4569,7 @@
                     "(×<b style='color:lime'>3.0</b>) Any System within borders<br/>    •   Any Planet<br/>\t    •   Is Volcanic World"
                   ],
                   "potential": [
-                    "Has DLC Infernals Species Pack"
+                    "Has DLC Infernals"
                   ],
                   "children": [],
                   "is_event": false,
@@ -7656,7 +7684,8 @@
             "(×<b style='color:red'>0.0</b>) Has Origin Endbringers"
           ],
           "potential": [
-            "One must be true\n    •   Has DLC Shadows of the Shroud\n    •   Does NOT have Gestalt Consciousness Ethic\n    •   Currently active resolution is Extradimensional Experimentation\n    •   Has Relic Psionic Archive",
+            "Has DLC Shadows of the Shroud",
+            "One must be true\n    •   Does NOT have Gestalt Consciousness Ethic\n    •   Currently active resolution is Extradimensional Experimentation\n    •   Has Relic Psionic Archive",
             "Does NOT have Origin Mindwardens"
           ],
           "children": [
@@ -7694,7 +7723,8 @@
                 "(×<b style='color:lime'>4.0</b>) One must be true<br/>    •   Any Leader in council has trait Maniacal 1<br/>    •   Any Leader in council has trait Maniacal 2<br/>    •   Any Leader in council has trait Maniacal 3"
               ],
               "potential": [
-                "One must be true\n    •   Has DLC Shadows of the Shroud\n    •   Does NOT have Gestalt Consciousness Ethic"
+                "Has DLC Shadows of the Shroud",
+                "One must be true\n    •   Does NOT have Gestalt Consciousness Ethic"
               ],
               "children": [
                 {
@@ -7732,7 +7762,8 @@
                     "(×<b style='color:lime'>2.0</b>) One must be true<br/>    •   Any Leader in council has trait Maniacal 1<br/>    •   Any Leader in council has trait Maniacal 2<br/>    •   Any Leader in council has trait Maniacal 3"
                   ],
                   "potential": [
-                    "One must be true\n    •   Has DLC Shadows of the Shroud\n    •   Does NOT have Gestalt Consciousness Ethic"
+                    "Has DLC Shadows of the Shroud",
+                    "One must be true\n    •   Does NOT have Gestalt Consciousness Ethic"
                   ],
                   "children": [
                     {
@@ -7770,7 +7801,8 @@
                         "(×<b style='color:lime'>1.5</b>) The Guest outcome"
                       ],
                       "potential": [
-                        "One must be true\n    •   Has DLC Shadows of the Shroud\n    •   Does NOT have Gestalt Consciousness Ethic"
+                        "Has DLC Shadows of the Shroud",
+                        "One must be true\n    •   Does NOT have Gestalt Consciousness Ethic"
                       ],
                       "children": [
                         {
@@ -7803,8 +7835,9 @@
                             "(×<b style='color:lime'>5.0</b>) Has Subterfuge Traditions Tradition"
                           ],
                           "potential": [
-                            "One must be true\n    •   Has DLC Shadows of the Shroud\n    •   Does NOT have Gestalt Consciousness Ethic",
-                            "Has DLC First Contact"
+                            "One must be true\n    •   Does NOT have Gestalt Consciousness Ethic",
+                            "Has DLC First Contact",
+                            "Has DLC Shadows of the Shroud"
                           ],
                           "children": [],
                           "is_event": false,
@@ -7858,7 +7891,8 @@
                     "(×<b style='color:lime'>2.0</b>) All must be true<br/>&nbsp;&nbsp;•&nbsp; Has DLC Shadows of the Shroud<br/>&nbsp;&nbsp;•&nbsp; Has Gestalt Consciousness Ethic"
                   ],
                   "potential": [
-                    "One must be true\n    •   Has DLC Shadows of the Shroud\n    •   Does NOT have Gestalt Consciousness Ethic"
+                    "Has DLC Shadows of the Shroud",
+                    "One must be true\n    •   Does NOT have Gestalt Consciousness Ethic"
                   ],
                   "children": [],
                   "is_event": false,
@@ -8621,7 +8655,8 @@
           "prerequisites_names": [],
           "weight_modifiers": [],
           "potential": [
-            "Has DLC BioGenesis\n Has Origin Wilderness"
+            "Has DLC BioGenesis",
+            "Has Origin Wilderness"
           ],
           "children": [],
           "is_event": false,

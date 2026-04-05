@@ -2542,7 +2542,8 @@
                   ],
                   "weight_modifiers": [],
                   "potential": [
-                    "One must be true\n Has DLC Grand Archive\n    •   One must be true\n\t    •   Has Government Civic: Beastmasters\n\t    •   Has Government Civic: Wild Swarm\n\t    •   Has Government Civic: Biodrones\n\t    •   Has Government Civic: Space Ranchers\n    •   One must be true\n\t    •   Has Space Amoeba dna\n\t    •   Has Tiyanki dna\n\t    •   Has Crystalline Entity dna\n\t    •   Has Voidworm dna\n\t    •   Has Cutholoid dna"
+                    "Has DLC Grand Archive",
+                    "One must be true\n    •   One must be true\n\t    •   Has Government Civic: Beastmasters\n\t    •   Has Government Civic: Wild Swarm\n\t    •   Has Government Civic: Biodrones\n\t    •   Has Government Civic: Space Ranchers\n    •   One must be true\n\t    •   Has Space Amoeba dna\n\t    •   Has Tiyanki dna\n\t    •   Has Crystalline Entity dna\n\t    •   Has Voidworm dna\n\t    •   Has Cutholoid dna"
                   ],
                   "children": [
                     {
@@ -4363,7 +4364,9 @@
           ],
           "potential": [
             "Does NOT have DLC Ancient Relics Story Pack",
-            "Has DLC Leviathans\n Has DLC Distant Stars\n Has DLC Grand Archive"
+            "Has DLC Leviathans",
+            "Has DLC Distant Stars",
+            "Has DLC Grand Archive"
           ],
           "children": [],
           "is_event": false,
@@ -4392,7 +4395,11 @@
             "(×<b style='color:lime'>3.0</b>) Any Leader in council has trait Curator 1",
             "(×<b style='color:red'>0.0</b>) All must be false<br/>    •   Any Leader in council has trait Curator 1<br/>    •   Has the Curator Insight modifier"
           ],
-          "potential": ["Has DLC Leviathans\n Has DLC Distant Stars\n Has DLC Grand Archive"],
+          "potential": [
+          "Has DLC Leviathans",
+          "Has DLC Distant Stars",
+          "Has DLC Grand Archive"
+          ],
           "children": [],
           "is_event": false,
           "source": "vanilla"

@@ -1057,7 +1057,7 @@
     "tier": 5,
     "prerequisites_names": [],
     "weight_modifiers": [],
-    "potential": ["One must be true\n    •   Has DLC The Machine Age\n    •   Has DLC Aquatics\n    •   Has DLC Leviathans"],
+    "potential": ["One must be true","Has DLC The Machine Age","Has DLC Aquatics","Has DLC Leviathans"],
     "children": [],
     "is_event": true,
     "source": "vanilla"
@@ -1640,7 +1640,7 @@
     "tier": 5,
     "prerequisites_names": [],
     "weight_modifiers": [],
-    "potential": ["Has DLC The Machine Age\n Has DLC Distant Stars"],
+    "potential": ["Has DLC The Machine Age","Has DLC Distant Stars"],
     "children": [],
     "is_event": true,
     "source": "vanilla"
@@ -2031,7 +2031,7 @@
       }
     ],
     "weight_modifiers": [],
-    "potential": ["Has DLC Utopia\n Has DLC Shadows of the Shroud"],
+    "potential": ["Has DLC Utopia","Has DLC Shadows of the Shroud"],
     "children": [],
     "is_event": true,
     "source": "vanilla"
@@ -2220,7 +2220,7 @@
     "prerequisites_names": [],
     "weight_modifiers": [],
     "potential": [
-      "Has DLC Ancient Relics Story Pack"
+      "Has DLC Ancient Relics"
     ],
     "children": [],
     "is_event": true,
@@ -2246,7 +2246,7 @@
     "prerequisites_names": [],
     "weight_modifiers": [],
     "potential": [
-      "Has DLC Ancient Relics Story Pack"
+      "Has DLC Ancient Relics"
     ],
     "children": [],
     "is_event": true,
@@ -2272,7 +2272,7 @@
     "prerequisites_names": [],
     "weight_modifiers": [],
     "potential": [
-      "Has DLC Ancient Relics Story Pack"
+      "Has DLC Ancient Relics"
     ],
     "children": [],
     "is_event": true,
@@ -2298,7 +2298,7 @@
     "prerequisites_names": [],
     "weight_modifiers": [],
     "potential": [
-      "Has DLC Ancient Relics Story Pack"
+      "Has DLC Ancient Relics"
     ],
     "children": [],
     "is_event": true,
@@ -2324,7 +2324,7 @@
     "prerequisites_names": [],
     "weight_modifiers": [],
     "potential": [
-      "Has DLC Ancient Relics Story Pack"
+      "Has DLC Ancient Relics"
     ],
     "children": [],
     "is_event": true,
@@ -2350,7 +2350,7 @@
     "prerequisites_names": [],
     "weight_modifiers": [],
     "potential": [
-      "Has DLC Ancient Relics Story Pack"
+      "Has DLC Ancient Relics"
     ],
     "children": [],
     "is_event": true,
@@ -2376,7 +2376,7 @@
     "prerequisites_names": [],
     "weight_modifiers": [],
     "potential": [
-      "Has DLC Ancient Relics Story Pack"
+      "Has DLC Ancient Relics"
     ],
     "children": [],
     "is_event": true,
