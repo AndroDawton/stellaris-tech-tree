@@ -1144,7 +1144,10 @@
     "tier": 5,
     "prerequisites_names": [],
     "weight_modifiers": [],
-    "potential": [],
+    "potential": [
+        "Has DLC The Machine Age",
+        "Has DLC Leviathans"
+    ],
     "children": [],
     "is_event": true,
     "source": "vanilla"
@@ -1169,7 +1172,10 @@
     "tier": 5,
     "prerequisites_names": [],
     "weight_modifiers": [],
-    "potential": [],
+    "potential": [
+        "Has DLC The Machine Age",
+        "Has DLC Leviathans"
+    ],
     "children": [],
     "is_event": true,
     "source": "vanilla"
