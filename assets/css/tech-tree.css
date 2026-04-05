@@ -649,14 +649,14 @@ span.tier-5 {
     /* Hier ist die Magie für die zwei Spalten */
     width: 450px; 
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Zwei gleich große Spalten */
+    grid-template-columns: 1fr 1fr 1fr; /* Drei gleich große Spalten */
     
     box-shadow: 0px 4px 10px rgba(0,0,0,0.5);
 }
 
-/* Der "All DLC"-Eintrag soll über die gesamte Breite (beide Spalten) gehen */
+/* Der "All DLC"-Eintrag soll über die gesamte Breite (alle Spalten) gehen */
 .dlc-dropdown-item[data-dlc="all"] {
-    grid-column: span 2;
+    grid-column: span 3;
     border-bottom: 2px solid #333; /* Etwas dickere Trennlinie */
 }
 
@@ -676,13 +676,14 @@ span.tier-5 {
 }
 
 /* Die rechten Spalten-Elemente brauchen keinen rechten Rahmen */
-.dlc-dropdown-item:nth-child(2n) {
+.dlc-dropdown-item:nth-child(3n) {
     border-right: none;
 }
 
-/* Die letzten beiden Elemente brauchen keinen unteren Rahmen */
+/* Die letzten Elemente brauchen keinen unteren Rahmen */
 .dlc-dropdown-item:nth-last-child(1),
-.dlc-dropdown-item:nth-last-child(2) {
+.dlc-dropdown-item:nth-last-child(2),
+.dlc-dropdown-item:nth-last-child(3){
     border-bottom: none;
 }
 
