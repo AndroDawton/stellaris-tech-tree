@@ -403,7 +403,16 @@ div.fixed div {
     padding-right:10px;
     border-radius: 15px 15px 0px 0px;
     margin-top: 10px;
-    
+}
+.float-MikddleElement{
+    display: inline;
+    float: left;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right:10px;
+    border-radius: 15px 15px 0px 0px;
+    margin-top: 10px;
 }
 .float-Search {
     padding: 2px 20px 0px 20px;
@@ -700,16 +709,17 @@ span.tier-5 {
     
     /* 1. GRÖSSE & ABSTÄNDE */
     width: 60px !important;        /* Reduziert die Breite (vorher war es viel breiter) */
-    height: 40px !important;       /* Reduziert die Höhe */
-    margin-top: 15px !important;   /*  Schiebt den Tab etwas nach unten, damit er auf einer Linie mit den anderen ist */
+    height: 24px !important;       /* Reduziert die Höhe */
+    margin-top: 10px !important;   /*  Schiebt den Tab etwas nach unten, damit er auf einer Linie mit den anderen ist */
     
     /* 2. ZENTRIERUNG (Das rückt das Wort "DLC" exakt in die Mitte) */
     display: flex !important;
-    align-items: center !important;  /* Zentriert vertikal */
+    align-items: flex-start !important;  /* Richtet die Schrift oben aus... */
     justify-content: center !important; /* Zentriert horizontal */
     
-    /* 3. INNENABSTÄNDE ENTFERNEN */
+    /* 3. Schift INNENABSTÄNDE ENTFERNEN */
     padding: 0 !important;          /* Verhindert, dass alte Abstände das Oval verzerren */
+    padding-top: 5px !important;    /* Schiebt Schrift hoch */
 }
 /* Hover-Effekt für alle normalen Menü-Buttons */
 .float-Element:hover {
