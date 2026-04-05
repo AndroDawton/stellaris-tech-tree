@@ -712,9 +712,10 @@ span.tier-5 {
     overflow: visible !important;
     
     /* 1. GRÖSSE & ABSTÄNDE */
-    width: 60px !important;        /* Reduziert die Breite (vorher war es viel breiter) */
+    width: 80px !important;        /* Reduziert die Breite (vorher war es viel breiter) */
     height: 24px !important;       /* Reduziert die Höhe */
-    margin-top: 10px !important;   /*  Schiebt den Tab etwas nach unten, damit er auf einer Linie mit den anderen ist */
+    margin-top: 10px !important;   /* Schiebt den Tab etwas nach unten, damit er auf einer Linie mit den anderen ist */
+    margin-left: 20px !important;  /* Abstand von links */
     
     /* 2. ZENTRIERUNG (Das rückt das Wort "DLC" exakt in die Mitte) */
     display: flex !important;
