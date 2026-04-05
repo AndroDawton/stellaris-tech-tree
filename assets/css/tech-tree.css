@@ -674,6 +674,7 @@ span.tier-5 {
     font-family: 'Arimo', Verdana, sans-serif;
     font-size: 13px;
     transition: all 0.2s ease;
+    text-align: center;
 }
 
 /* Die rechten Spalten-Elemente brauchen keinen rechten Rahmen */
